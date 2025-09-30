@@ -5,7 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Word Of Faith Christian School</title>
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
   <!-- Font Awesome 5 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -25,16 +28,15 @@
           <i class="fas fa-map-marker-alt mr-1"></i>Hospital Street, Dodowa, Accra, Ghana
         </span>
         <span class="flex items-center">
-          <i class="fas fa-envelope mr-1"></i>Email:
-          <a href="mailto:info@yourschool.com" class="ml-1 underline hover:text-green-400">
+          <i class="fas fa-envelope mr-1"></i>
+          <a href="mailto:wfcsdodowa@gmail.com" class="ml-1 underline hover:text-green-400">
             wfcsdodowa@gmail.com
           </a>
         </span>
         <span class="flex items-center">
-          <a href="tel:+233123456789"
-              class="inline-flex items-center text-slate-100 hover:text-green-400 transition">
-              <i class="fas fa-phone-alt mr-2 text-slate-100"></i> +233 (0) 50 174 6739
-            </a>
+          <a href="tel:+233501746739" class="inline-flex items-center text-slate-100 hover:text-green-400 transition">
+            <i class="fas fa-phone-alt mr-2 text-slate-100"></i> +233 (0) 50 174 6739
+          </a>
         </span>
       </div>
 
@@ -63,12 +65,10 @@
         </h1>
       </div>
 
-
       <!-- Desktop Navigation -->
       <nav class="hidden lg:flex space-x-6 text-base">
         <a href="index.html" class="relative group text-gray-800 hover:text-green-600">
           Home
-          <!-- Static Dots on Hover -->
           <span
             class="absolute left-1/2 -bottom-2 flex -translate-x-1/2 space-x-1 opacity-0 group-hover:opacity-100 transition">
             <span class="w-1 h-1 bg-green-600 rounded-full"></span>
@@ -127,8 +127,6 @@
           </span>
         </a>
 
-
-
         <!-- Gallery -->
         <div class="relative group">
           <a href="#gallery" class="hover:text-green-600 inline-flex items-center">
@@ -165,7 +163,7 @@
           </div>
         </div>
 
-        <a href="index.html#contact" class="relative group hover:text-green-600">
+        <a href="#contact" class="relative group hover:text-green-600">
           Contact
           <span
             class="absolute left-1/2 -bottom-2 flex -translate-x-1/2 space-x-1 opacity-0 group-hover:opacity-100 transition">
@@ -174,7 +172,6 @@
             <span class="w-1 h-1 bg-green-600 rounded-full"></span>
           </span>
         </a>
-
       </nav>
 
       <!-- Mobile Menu Button -->
@@ -218,7 +215,6 @@
         Facilities
       </a>
 
-
       <!-- Gallery -->
       <div>
         <button class="w-full flex justify-between items-center px-2 py-2 hover:text-green-600"
@@ -252,10 +248,11 @@
         </div>
       </div>
 
-      <a href="index.html#contact" class="block py-2 px-2 rounded hover:bg-green-100">Contact</a>
+      <a href="#contact" class="block py-2 px-2 rounded hover:bg-green-100">Contact</a>
     </div>
   </header>
 
+  <!-- JS for Mobile Dropdown -->
   <script>
     const menuBtn = document.getElementById("menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
@@ -273,61 +270,65 @@
   </script>
 
 
-    <!-- Hero Section -->
-    <section class="relative bg-green-600 text-white py-20 text-center">
-        <div class="max-w-4xl mx-auto px-6">
-            <h1 class="text-4xl md:text-5xl text-yellow-400 font-bold mb-4">Announcements</h1>
+<!-- Hero Section -->
+<section class="relative bg-green-600 text-white py-20 text-center">
+  <div class="max-w-4xl mx-auto px-6">
+    <h1 class="text-4xl md:text-5xl text-yellow-400 font-bold mb-4">Announcements</h1>
+    <p class="text-lg md:text-xl text-green-100">
+      Stay updated with the latest news and important information from Word of Faith Christian School.
+    </p>
+  </div>
+</section>
 
+<!-- Announcements List -->
+<section class="py-16 bg-slate-100">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="space-y-8">
 
-            <p class="text-lg md:text-xl text-green-100">
-                Stay updated with the latest news, and important information from Word Of Faith Christian School.
-            </p>
-        </div>
-    </section>
+      <!-- Announcement 1 -->
+      <div class="p-6 rounded-2xl bg-white shadow-md hover:shadow-xl transition">
+        <h2 class="text-2xl font-semibold text-green-600 flex items-center mb-3">
+          <i class="fas fa-user-graduate mr-2 text-green-600"></i> Admissions Open for 2025/2026 Academic Year
+        </h2>
+        <p class="text-gray-700">
+          Enrollment is now open for the <strong>2025/2026 academic year</strong>. Prospective parents and guardians are encouraged to complete the admission process early to secure placement for their wards.
+        </p>
+      </div>
 
-    <!-- Announcements List -->
-    <section class="py-16 bg-slate-100">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="space-y-8">
+      <!-- Announcement 2 -->
+      <div class="p-6 rounded-2xl bg-white shadow-md hover:shadow-xl transition">
+        <h2 class="text-2xl font-semibold text-green-600 flex items-center mb-3">
+          <i class="fas fa-trophy mr-2 text-green-600"></i> Outstanding WASSCE Results
+        </h2>
+        <p class="text-gray-700">
+          Congratulations to our <strong>SHS Class of 2025</strong> for their exceptional performance in the WASSCE.
+          Your hard work and dedication have brought pride to the school and continue our tradition of academic excellence.
+        </p>
+      </div>
 
-                <!-- Announcement 1 -->
-                <div class="p-6 rounded-2xl bg-white shadow-md hover:shadow-xl transition">
-                    <h2 class="text-2xl font-semibold text-green-600 flex items-center mb-3">
-                        <i class="fas fa-bullhorn mr-2 text-green-600"></i> Mid-Term Exams Begin Next Week
-                    </h2>
-                    <p class="text-gray-700">
-                        Mid-term examinations will commence on <strong>Monday, October 7th, 2025</strong>.
-                        Students are encouraged to study well, follow their schedules, and arrive promptly.
-                    </p>
-                </div>
+      <!-- Announcement 3 -->
+      <div class="p-6 rounded-2xl bg-white shadow-md hover:shadow-xl transition">
+        <h2 class="text-2xl font-semibold text-green-600 flex items-center mb-3">
+          <i class="fas fa-futbol mr-2 text-green-600"></i> Inter-House Sports Festival
+        </h2>
+        <p class="text-gray-700">
+          Our exciting <strong>Inter-House Sports Festival</strong> is coming soon! Students will participate in athletics, football, volleyball, and other activities to showcase their talents and teamwork.
+        </p>
+      </div>
 
-                <!-- Announcement 2 -->
-                <div class="p-6 rounded-2xl bg-white shadow-md hover:shadow-xl transition">
-                    <h2 class="text-2xl font-semibold text-green-600 flex items-center mb-3">
-                        <i class="fas fa-drum mr-2 text-green-600"></i> Cultural Day Celebration
-                    </h2>
-                    <p class="text-gray-700">
-                        Our annual <strong>Cultural Day</strong> will take place on <strong>Friday, October 25th,
-                            2025</strong>.
-                        Students are invited to wear traditional attire and showcase performances and cultural
-                        exhibitions.
-                    </p>
-                </div>
+      <!-- Announcement 4 -->
+      <div class="p-6 rounded-2xl bg-white shadow-md hover:shadow-xl transition">
+        <h2 class="text-2xl font-semibold text-green-600 flex items-center mb-3">
+          <i class="fas fa-bus mr-2 text-green-600"></i> Excursion: Primary 6 Visit to National Museum
+        </h2>
+        <p class="text-gray-700">
+          Our <strong>Primary 6 students</strong> recently embarked on an educational trip to the <strong>National Museum</strong>, where they explored Ghana’s rich history and cultural heritage.
+        </p>
+      </div>
 
-                <!-- Announcement 3 -->
-                <div class="p-6 rounded-2xl bg-white shadow-md hover:shadow-xl transition">
-                    <h2 class="text-2xl font-semibold text-green-600 flex items-center mb-3">
-                        <i class="fas fa-users mr-2 text-green-600"></i> PTA Meeting Scheduled
-                    </h2>
-                    <p class="text-gray-700">
-                        A <strong>Parents-Teachers Association meeting</strong> will be held on
-                        <strong>Saturday, November 2nd, 2025</strong> at 10:00 AM in the school auditorium.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
+    </div>
+  </div>
+</section>
 
     <!-- Footer -->
   <footer id="contact" class="bg-green-600 text-white py-12 mt-16 relative">

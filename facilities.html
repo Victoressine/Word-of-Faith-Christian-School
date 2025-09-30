@@ -5,7 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Word Of Faith Christian School</title>
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
   <!-- Font Awesome 5 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -25,16 +28,15 @@
           <i class="fas fa-map-marker-alt mr-1"></i>Hospital Street, Dodowa, Accra, Ghana
         </span>
         <span class="flex items-center">
-          <i class="fas fa-envelope mr-1"></i>Email:
-          <a href="mailto:info@yourschool.com" class="ml-1 underline hover:text-green-400">
+          <i class="fas fa-envelope mr-1"></i>
+          <a href="mailto:wfcsdodowa@gmail.com" class="ml-1 underline hover:text-green-400">
             wfcsdodowa@gmail.com
           </a>
         </span>
         <span class="flex items-center">
-          <a href="tel:+233123456789"
-              class="inline-flex items-center text-slate-100 hover:text-green-400 transition">
-              <i class="fas fa-phone-alt mr-2 text-slate-100"></i> +233 (0) 50 174 6739
-            </a>
+          <a href="tel:+233501746739" class="inline-flex items-center text-slate-100 hover:text-green-400 transition">
+            <i class="fas fa-phone-alt mr-2 text-slate-100"></i> +233 (0) 50 174 6739
+          </a>
         </span>
       </div>
 
@@ -63,12 +65,10 @@
         </h1>
       </div>
 
-
       <!-- Desktop Navigation -->
       <nav class="hidden lg:flex space-x-6 text-base">
         <a href="index.html" class="relative group text-gray-800 hover:text-green-600">
           Home
-          <!-- Static Dots on Hover -->
           <span
             class="absolute left-1/2 -bottom-2 flex -translate-x-1/2 space-x-1 opacity-0 group-hover:opacity-100 transition">
             <span class="w-1 h-1 bg-green-600 rounded-full"></span>
@@ -127,8 +127,6 @@
           </span>
         </a>
 
-
-
         <!-- Gallery -->
         <div class="relative group">
           <a href="#gallery" class="hover:text-green-600 inline-flex items-center">
@@ -165,7 +163,7 @@
           </div>
         </div>
 
-        <a href="index.html#contact" class="relative group hover:text-green-600">
+        <a href="#contact" class="relative group hover:text-green-600">
           Contact
           <span
             class="absolute left-1/2 -bottom-2 flex -translate-x-1/2 space-x-1 opacity-0 group-hover:opacity-100 transition">
@@ -174,7 +172,6 @@
             <span class="w-1 h-1 bg-green-600 rounded-full"></span>
           </span>
         </a>
-
       </nav>
 
       <!-- Mobile Menu Button -->
@@ -218,7 +215,6 @@
         Facilities
       </a>
 
-
       <!-- Gallery -->
       <div>
         <button class="w-full flex justify-between items-center px-2 py-2 hover:text-green-600"
@@ -252,10 +248,11 @@
         </div>
       </div>
 
-      <a href="index.html#contact" class="block py-2 px-2 rounded hover:bg-green-100">Contact</a>
+      <a href="#contact" class="block py-2 px-2 rounded hover:bg-green-100">Contact</a>
     </div>
   </header>
 
+  <!-- JS for Mobile Dropdown -->
   <script>
     const menuBtn = document.getElementById("menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
@@ -273,133 +270,140 @@
   </script>
 
 
-<!-- Hero -->
-<section class="relative bg-green-600 text-white py-20 text-center">
-  <div class="max-w-4xl mx-auto px-6">
-    <h1 class="text-3xl md:text-5xl font-bold text-yellow-400 mb-4">Our Facilities</h1>
-    <p class="text-lg md:text-xl text-green-100">
-      Discover the modern facilities that support learning, creativity, and growth at our school.
-    </p>
-  </div>
-</section>
+  <!-- Hero -->
+  <section class="relative bg-green-600 text-white py-20 text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <h1 class="text-3xl md:text-5xl font-bold text-yellow-400 mb-4">Our Facilities</h1>
+      <p class="text-lg md:text-xl text-green-100">
+        Explore the well-equipped facilities at Word Of Faith Christian School, designed to inspire learning,
+        creativity, discipline, and spiritual growth for every student.
+      </p>
+    </div>
+  </section>
 
-<!-- Facilities Section -->
-<section class="py-20 bg-slate-100">
-  <div class="max-w-7xl mx-auto px-7">
-    <!-- Grid Layout -->
-    <div id="facilities" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+  <!-- Facilities Section -->
+  <section class="py-20 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-7">
+      <!-- Grid Layout -->
+      <div id="facilities" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
-      <!-- Facility 1 -->
-      <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300">
-        <img src="images/class002.jpg" class="w-full h-80 object-cover cursor-pointer" alt="Science Lab">
-        <div class="p-8">
-          <h3 class="text-2xl font-bold">Learning-Friendly Classrooms</h3>
-          <p class="text-lg text-gray-600 mt-3">Our classrooms are designed to be welcoming, engaging, and supportive, creating the perfect environment for effective learning.</p>
+        <!-- Facility 1 -->
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src="images/class002.jpg" class="w-full h-80 object-cover cursor-pointer" alt="Science Lab">
+          <div class="p-8">
+            <h3 class="text-2xl font-bold">Learning-Friendly Classrooms</h3>
+            <p class="text-lg text-gray-600 mt-3">Our classrooms are designed to be welcoming, engaging, and supportive,
+              creating the perfect environment for effective learning.</p>
+          </div>
         </div>
-      </div>
 
-      <!-- Facility 2 -->
-      <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300">
-        <img src="images/bo005.jpg" class="w-full h-80 object-cover cursor-pointer" alt="Sports Field">
-        <div class="p-8">
-          <h3 class="text-2xl font-bold">Boarding School</h3>
-          <p class="text-lg text-gray-600 mt-3">Secure and well-supervised hostels that provide students with a safe, supportive, and homely environment.</p>
+        <!-- Facility 2 -->
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src="images/bo005.jpg" class="w-full h-80 object-cover cursor-pointer" alt="Sports Field">
+          <div class="p-8">
+            <h3 class="text-2xl font-bold">Boarding School</h3>
+            <p class="text-lg text-gray-600 mt-3">Secure and well-supervised hostels that provide students with a safe,
+              supportive, and homely environment.</p>
+          </div>
         </div>
-      </div>
 
-      <!-- Facility 3 -->
-      <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300">
-        <img src="images/l004.jpg" class="w-full h-80 object-cover cursor-pointer" alt="Library">
-        <div class="p-8">
-          <h3 class="text-2xl font-bold">Library</h3>
-          <p class="text-lg text-gray-600 mt-3">A well-stocked library with a wide range of books and resources to inspire reading, research, and knowledge building.</p>
+        <!-- Facility 3 -->
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src="images/lib018.png" class="w-full h-80 object-cover cursor-pointer" alt="Library">
+          <div class="p-8">
+            <h3 class="text-2xl font-bold">Library</h3>
+            <p class="text-lg text-gray-600 mt-3">A well-stocked library with a wide range of books and resources to
+              inspire reading, research, and knowledge building.</p>
+          </div>
         </div>
-      </div>
 
-      <!-- Facility 4 -->
-      <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300">
-        <img src="images/heroimage4.jpeg" class="w-full h-80 object-cover cursor-pointer" alt="Computer Lab">
-        <div class="p-8">
-          <h3 class="text-2xl font-bold">Computer Lab</h3>
-          <p class="text-lg text-gray-600 mt-3">Equipped with modern computers and internet access, our lab supports hands-on learning and digital skills development.</p>
+        <!-- Facility 4 -->
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src="images/lab019.png" class="w-full h-80 object-cover cursor-pointer" alt="Computer Lab">
+          <div class="p-8">
+            <h3 class="text-2xl font-bold">Computer Lab</h3>
+            <p class="text-lg text-gray-600 mt-3">Equipped with modern computers and internet access, our lab supports
+              hands-on learning and digital skills development.</p>
+          </div>
         </div>
-      </div>
 
-      <!-- Facility 5 -->
-      <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300">
-        <img src="images/compund005.jpg" class="w-full h-80 object-cover cursor-pointer" alt="Sports Field">
-        <div class="p-8">
-          <h3 class="text-2xl font-bold">Large Compound</h3>
-          <p class="text-lg text-gray-600 mt-3">A spacious compound that provides room for sports, recreation, and outdoor activities in a safe environment.</p>
+        <!-- Facility 5 -->
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src="images/compund005.png" class="w-full h-80 object-cover cursor-pointer" alt="Sports Field">
+          <div class="p-8">
+            <h3 class="text-2xl font-bold">Large Compound</h3>
+            <p class="text-lg text-gray-600 mt-3">A spacious compound that provides room for sports, recreation, and
+              outdoor activities in a safe environment.</p>
+          </div>
         </div>
-      </div>
 
-      <!-- Facility 6 -->
-      <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300">
-        <img src="images/a001.jpg" class="w-full h-80 object-cover cursor-pointer" alt="Sports Field">
-        <div class="p-8">
-          <h3 class="text-2xl font-bold">Auditorium</h3>
-          <p class="text-lg text-gray-600 mt-3">A modern auditorium for hosting events, presentations, and performances, offering students opportunities to learn and showcase their talents.</p>
+        <!-- Facility 6 -->
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src="images/a001.jpg" class="w-full h-80 object-cover cursor-pointer" alt="Sports Field">
+          <div class="p-8">
+            <h3 class="text-2xl font-bold">Auditorium</h3>
+            <p class="text-lg text-gray-600 mt-3">A modern auditorium for hosting events, presentations, and
+              performances, offering students opportunities to learn and showcase their talents.</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- Fullscreen Modal -->
-<div id="imageModal" class="fixed inset-0 bg-black bg-opacity-90 hidden items-center justify-center z-50 p-4">
+  <!-- Fullscreen Modal -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-90 hidden items-center justify-center z-50 p-4">
     <!-- Close -->
-    <span onclick="closeModal()" 
-          class="absolute top-4 right-6 text-white text-4xl md:text-5xl cursor-pointer font-bold">&times;</span>
+    <span onclick="closeModal()"
+      class="absolute top-4 right-6 text-white text-4xl md:text-5xl cursor-pointer font-bold">&times;</span>
 
     <!-- Prev Button -->
-    <button id="prevBtn" 
-            class="absolute left-4 text-white text-4xl md:text-5xl font-bold px-4 py-2 hover:text-yellow-400">&#10094;</button>
+    <button id="prevBtn"
+      class="absolute left-4 text-white text-4xl md:text-5xl font-bold px-4 py-2 hover:text-yellow-400">&#10094;</button>
 
     <!-- Image -->
     <img id="modalImage" class="max-h-[80vh] max-w-[90vw] w-auto h-auto rounded-lg shadow-lg object-contain">
 
     <!-- Next Button -->
-    <button id="nextBtn" 
-            class="absolute right-4 text-white text-4xl md:text-5xl font-bold px-4 py-2 hover:text-yellow-400">&#10095;</button>
-</div>
+    <button id="nextBtn"
+      class="absolute right-4 text-white text-4xl md:text-5xl font-bold px-4 py-2 hover:text-yellow-400">&#10095;</button>
+  </div>
 
-<script>
+  <script>
     const images = Array.from(document.querySelectorAll("#facilities img")); // ✅ fixed here
     const modal = document.getElementById("imageModal");
     const modalImg = document.getElementById("modalImage");
     let currentIndex = 0;
 
     function openModal(index) {
-        currentIndex = index;
-        modal.classList.remove("hidden");
-        modal.classList.add("flex");
-        showImage();
+      currentIndex = index;
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+      showImage();
     }
 
     function closeModal() {
-        modal.classList.add("hidden");
-        modal.classList.remove("flex");
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
     }
 
     function showImage() {
-        modalImg.src = images[currentIndex].src;
-        modalImg.alt = images[currentIndex].alt;
+      modalImg.src = images[currentIndex].src;
+      modalImg.alt = images[currentIndex].alt;
     }
 
     function nextImage() {
-        currentIndex = (currentIndex + 1) % images.length;
-        showImage();
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage();
     }
 
     function prevImage() {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        showImage();
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage();
     }
 
     images.forEach((img, index) => {
-        img.addEventListener("click", () => openModal(index));
+      img.addEventListener("click", () => openModal(index));
     });
 
     document.getElementById("nextBtn").addEventListener("click", nextImage);
@@ -407,23 +411,23 @@
 
     // Close modal when clicking background
     modal.addEventListener("click", (e) => {
-        if (e.target === modal) {
-            closeModal();
-        }
+      if (e.target === modal) {
+        closeModal();
+      }
     });
 
     // Keyboard navigation
     document.addEventListener("keydown", (e) => {
-        if (!modal.classList.contains("hidden")) {
-            if (e.key === "ArrowRight") nextImage();
-            if (e.key === "ArrowLeft") prevImage();
-            if (e.key === "Escape") closeModal();
-        }
+      if (!modal.classList.contains("hidden")) {
+        if (e.key === "ArrowRight") nextImage();
+        if (e.key === "ArrowLeft") prevImage();
+        if (e.key === "Escape") closeModal();
+      }
     });
-</script>
+  </script>
 
 
-    <!-- Footer -->
+  <!-- Footer -->
   <footer id="contact" class="bg-green-600 text-white py-12 mt-16 relative">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-10 text-center md:text-left">

@@ -5,7 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Word Of Faith Christian School</title>
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
   <!-- Font Awesome 5 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -25,16 +28,15 @@
           <i class="fas fa-map-marker-alt mr-1"></i>Hospital Street, Dodowa, Accra, Ghana
         </span>
         <span class="flex items-center">
-          <i class="fas fa-envelope mr-1"></i>Email:
-          <a href="mailto:info@yourschool.com" class="ml-1 underline hover:text-green-400">
+          <i class="fas fa-envelope mr-1"></i>
+          <a href="mailto:wfcsdodowa@gmail.com" class="ml-1 underline hover:text-green-400">
             wfcsdodowa@gmail.com
           </a>
         </span>
         <span class="flex items-center">
-          <a href="tel:+233123456789"
-              class="inline-flex items-center text-slate-100 hover:text-green-400 transition">
-              <i class="fas fa-phone-alt mr-2 text-slate-100"></i> +233 (0) 50 174 6739
-            </a>
+          <a href="tel:+233501746739" class="inline-flex items-center text-slate-100 hover:text-green-400 transition">
+            <i class="fas fa-phone-alt mr-2 text-slate-100"></i> +233 (0) 50 174 6739
+          </a>
         </span>
       </div>
 
@@ -63,12 +65,10 @@
         </h1>
       </div>
 
-
       <!-- Desktop Navigation -->
       <nav class="hidden lg:flex space-x-6 text-base">
         <a href="index.html" class="relative group text-gray-800 hover:text-green-600">
           Home
-          <!-- Static Dots on Hover -->
           <span
             class="absolute left-1/2 -bottom-2 flex -translate-x-1/2 space-x-1 opacity-0 group-hover:opacity-100 transition">
             <span class="w-1 h-1 bg-green-600 rounded-full"></span>
@@ -127,8 +127,6 @@
           </span>
         </a>
 
-
-
         <!-- Gallery -->
         <div class="relative group">
           <a href="#gallery" class="hover:text-green-600 inline-flex items-center">
@@ -165,7 +163,7 @@
           </div>
         </div>
 
-        <a href="index.html#contact" class="relative group hover:text-green-600">
+        <a href="#contact" class="relative group hover:text-green-600">
           Contact
           <span
             class="absolute left-1/2 -bottom-2 flex -translate-x-1/2 space-x-1 opacity-0 group-hover:opacity-100 transition">
@@ -174,7 +172,6 @@
             <span class="w-1 h-1 bg-green-600 rounded-full"></span>
           </span>
         </a>
-
       </nav>
 
       <!-- Mobile Menu Button -->
@@ -218,7 +215,6 @@
         Facilities
       </a>
 
-
       <!-- Gallery -->
       <div>
         <button class="w-full flex justify-between items-center px-2 py-2 hover:text-green-600"
@@ -252,10 +248,11 @@
         </div>
       </div>
 
-      <a href="index.html#contact" class="block py-2 px-2 rounded hover:bg-green-100">Contact</a>
+      <a href="#contact" class="block py-2 px-2 rounded hover:bg-green-100">Contact</a>
     </div>
   </header>
 
+  <!-- JS for Mobile Dropdown -->
   <script>
     const menuBtn = document.getElementById("menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
@@ -272,187 +269,191 @@
     }
   </script>
 
-    <!-- Hero Section -->
-    <section class="relative bg-green-600 text-white py-20 text-center">
-        <div class="max-w-4xl mx-auto px-4 md:px-6">
-            <h1 class="text-3xl md:text-5xl text-yellow-400 font-bold mb-4">Upcoming Events</h1>
-            <p class="text-base md:text-xl text-green-100">
-                Stay connected with our latest programs, celebrations, and community activities.
-            </p>
-        </div>
-    </section>
-
-    <!-- Events Section -->
-    <section class="py-12 md:py-16 bg-slate-100 relative">
-        <div class="max-w-7xl mx-auto px-4 md:px-8 relative overflow-hidden">
-
-            <!-- Slider Container -->
-            <div id="eventSlider" class="flex transition-transform duration-500 ease-in-out">
-
-                <!-- Event Card -->
-                <div class="min-w-full sm:min-w-[50%] lg:min-w-[33.333%] p-2">
-                    <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden">
-                        <img src="images/heroimage1.jpeg" alt="Event 1"
-                            class="w-full h-56 md:h-48 object-cover cursor-pointer open-image">
-                        <div class="p-6">
-                            <h2 class="text-lg font-semibold text-green-600 mb-2 flex items-center">
-                                <i class="fas fa-graduation-cap mr-2 text-green-600"></i> Graduation Ceremony
-                            </h2>
-                            <p class="text-sm text-gray-500 mb-3"><i class="far fa-calendar-alt mr-1"></i> October 15,
-                                2025</p>
-                            <p class="text-gray-700">Celebrate the achievements of our students at the annual graduation
-                                ceremony with performances and awards.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="min-w-full sm:min-w-[50%] lg:min-w-[33.333%] p-2">
-                    <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden">
-                        <img src="images/heroimage3.jpeg" alt="Event 2"
-                            class="w-full h-56 md:h-48 object-cover cursor-pointer open-image">
-                        <div class="p-6">
-                            <h2 class="text-lg font-semibold text-green-600 mb-2 flex items-center">
-                                <i class="fas fa-basketball-ball mr-2 text-green-600"></i> Sports Day
-                            </h2>
-                            <p class="text-sm text-gray-500 mb-3"><i class="far fa-calendar-alt mr-1"></i> November 3,
-                                2025</p>
-                            <p class="text-gray-700">Join us for a fun-filled day of athletics, games, and teamwork on
-                                our annual Sports Day.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="min-w-full sm:min-w-[50%] lg:min-w-[33.333%] p-2">
-                    <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden">
-                        <img src="images/heroimage2.jpeg" alt="Event 3"
-                            class="w-full h-56 md:h-48 object-cover cursor-pointer open-image">
-                        <div class="p-6">
-                            <h2 class="text-lg font-semibold text-green-600 mb-2 flex items-center">
-                                <i class="fas fa-theater-masks mr-2 text-green-600"></i> Drama & Arts Festival
-                            </h2>
-                            <p class="text-sm text-gray-500 mb-3"><i class="far fa-calendar-alt mr-1"></i> December 12,
-                                2025</p>
-                            <p class="text-gray-700">Experience creativity and talent at our drama and arts festival,
-                                featuring student performances and exhibitions.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="min-w-full sm:min-w-[50%] lg:min-w-[33.333%] p-2">
-                    <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden">
-                        <img src="images/heroimage3.jpeg" alt="Event 4"
-                            class="w-full h-56 md:h-48 object-cover cursor-pointer open-image">
-                        <div class="p-6">
-                            <h2 class="text-lg font-semibold text-green-600 mb-2 flex items-center">
-                                <i class="fas fa-music mr-2 text-green-600"></i> Music Concert
-                            </h2>
-                            <p class="text-sm text-gray-500 mb-3"><i class="far fa-calendar-alt mr-1"></i> January 20,
-                                2026</p>
-                            <p class="text-gray-700">Enjoy a night filled with amazing performances at our student-led
-                                music concert.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="min-w-full sm:min-w-[50%] lg:min-w-[33.333%] p-2">
-                    <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden">
-                        <img src="images/heroimage4.jpeg" alt="Event 5"
-                            class="w-full h-56 md:h-48 object-cover cursor-pointer open-image">
-                        <div class="p-6">
-                            <h2 class="text-lg font-semibold text-green-600 mb-2 flex items-center">
-                                <i class="fas fa-tree mr-2 text-green-600"></i> Cultural Festival
-                            </h2>
-                            <p class="text-sm text-gray-500 mb-3"><i class="far fa-calendar-alt mr-1"></i> March 8, 2026
-                            </p>
-                            <p class="text-gray-700">Celebrate culture and diversity with performances, food, and
-                                exhibitions at our cultural festival.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Navigation Arrows -->
-            <button id="prevBtn"
-                class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 z-10">
-                &#8592;
-            </button>
-            <button id="nextBtn"
-                class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 z-10">
-                &#8594;
-            </button>
-        </div>
-    </section>
-
-    <!-- Fullscreen Image Modal -->
-    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 hidden flex items-center justify-center z-50 p-4">
-        <span id="closeModal" class="absolute top-5 right-6 text-white text-4xl font-bold cursor-pointer">&times;</span>
-        <img id="modalImage" class="max-w-full max-h-[90vh] rounded-lg shadow-lg">
+  <!-- Hero Section -->
+  <section class="relative bg-green-600 text-white py-20 text-center">
+    <div class="max-w-4xl mx-auto px-4 md:px-6">
+      <h1 class="text-3xl md:text-5xl text-yellow-400 font-bold mb-4">Upcoming Events</h1>
+      <p class="text-base md:text-xl text-green-100">
+        Stay connected with our latest programs, celebrations, and community activities.
+      </p>
     </div>
+  </section>
 
-    <!-- JavaScript -->
-    <script>
-        const slider = document.getElementById("eventSlider");
-        const prevBtn = document.getElementById("prevBtn");
-        const nextBtn = document.getElementById("nextBtn");
+  <!-- Events Section -->
+  <section class="py-12 md:py-16 bg-slate-100 relative">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 relative overflow-hidden">
 
-        let currentIndex = 0;
-        const totalCards = slider.children.length;
+      <!-- Slider Container -->
+      <div id="eventSlider" class="flex transition-transform duration-500 ease-in-out">
 
-        // Adjust cards per view based on screen size
-        function getCardsPerView() {
-            if (window.innerWidth < 640) return 1; // mobile
-            if (window.innerWidth < 1024) return 2; // tablet
-            return 3; // desktop
-        }
+        <!-- Event Card 1 -->
+        <div class="min-w-full sm:min-w-[50%] lg:min-w-[33.333%] p-2">
+          <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden">
+            <img src="images/grad-highlight.png" alt="Event 1"
+              class="w-full h-56 md:h-48 object-cover cursor-pointer open-image">
+            <div class="p-6">
+              <h2 class="text-lg font-semibold text-green-600 mb-2 flex items-center">
+                <i class="fas fa-graduation-cap mr-2 text-green-600"></i> Graduation Ceremony
+              </h2>
+              <p class="text-sm text-gray-500 mb-3"><i class="far fa-calendar-alt mr-1"></i> October 15,
+                2025</p>
+              <p class="text-gray-700">Celebrate the achievements of our students at the annual graduation
+                ceremony with performances and awards.</p>
+            </div>
+          </div>
+        </div>
 
-        function updateSlider() {
-            const cardsPerView = getCardsPerView();
-            const translateX = -(currentIndex * (100 / cardsPerView));
-            slider.style.transform = `translateX(${translateX}%)`;
-        }
+        <!-- Event Card 2 -->
+        <div class="min-w-full sm:min-w-[50%] lg:min-w-[33.333%] p-2">
+          <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden">
+            <img src="images/sports day.jpg" alt="Event 2"
+              class="w-full h-56 md:h-48 object-cover cursor-pointer open-image">
+            <div class="p-6">
+              <h2 class="text-lg font-semibold text-green-600 mb-2 flex items-center">
+                <i class="fas fa-basketball-ball mr-2 text-green-600"></i> Sports Day
+              </h2>
+              <p class="text-sm text-gray-500 mb-3"><i class="far fa-calendar-alt mr-1"></i> November 3,
+                2025</p>
+              <p class="text-gray-700">Join us for a fun-filled day of athletics, games, and teamwork on
+                our annual Sports Day.</p>
+            </div>
+          </div>
+        </div>
 
-        nextBtn.addEventListener("click", () => {
-            const cardsPerView = getCardsPerView();
-            if (currentIndex < totalCards - cardsPerView) {
-                currentIndex++;
-                updateSlider();
-            }
-        });
+        <!-- Event Card 3 -->
+        <div class="min-w-full sm:min-w-[50%] lg:min-w-[33.333%] p-2">
+          <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden">
+            <img src="images/festival0.jpeg" alt="Event 3"
+              class="w-full h-56 md:h-48 object-cover cursor-pointer open-image">
+            <div class="p-6">
+              <h2 class="text-lg font-semibold text-green-600 mb-2 flex items-center">
+                <i class="fas fa-theater-masks mr-2 text-green-600"></i> Drama & Arts Festival
+              </h2>
+              <p class="text-sm text-gray-500 mb-3"><i class="far fa-calendar-alt mr-1"></i> December 12,
+                2025</p>
+              <p class="text-gray-700">Experience creativity and talent at our drama and arts festival,
+                featuring student performances and exhibitions.</p>
+            </div>
+          </div>
+        </div>
 
-        prevBtn.addEventListener("click", () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-                updateSlider();
-            }
-        });
+        <!-- Event Card 4 -->
+        <div class="min-w-full sm:min-w-[50%] lg:min-w-[33.333%] p-2">
+          <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden">
+            <img src="images/heroimage3.jpeg" alt="Event 4"
+              class="w-full h-56 md:h-48 object-cover cursor-pointer open-image">
+            <div class="p-6">
+              <h2 class="text-lg font-semibold text-green-600 mb-2 flex items-center">
+                <i class="fas fa-music mr-2 text-green-600"></i> Music Concert
+              </h2>
+              <p class="text-sm text-gray-500 mb-3"><i class="far fa-calendar-alt mr-1"></i> January 20,
+                2026</p>
+              <p class="text-gray-700">Enjoy a night filled with amazing performances at our student-led
+                music concert.</p>
+            </div>
+          </div>
+        </div>
 
-        window.addEventListener("resize", updateSlider);
+        <!-- Event Card 5 -->
+        <div class="min-w-full sm:min-w-[50%] lg:min-w-[33.333%] p-2">
+          <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden">
+            <img src="images/heroimage4.jpeg" alt="Event 5"
+              class="w-full h-56 md:h-48 object-cover cursor-pointer open-image">
+            <div class="p-6">
+              <h2 class="text-lg font-semibold text-green-600 mb-2 flex items-center">
+                <i class="fas fa-tree mr-2 text-green-600"></i> Cultural Festival
+              </h2>
+              <p class="text-sm text-gray-500 mb-3"><i class="far fa-calendar-alt mr-1"></i> March 8, 2026
+              </p>
+              <p class="text-gray-700">Celebrate culture and diversity with performances, food, and
+                exhibitions at our cultural festival.</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        // Image Modal
-        const images = document.querySelectorAll(".open-image");
-        const modal = document.getElementById("imageModal");
-        const modalImg = document.getElementById("modalImage");
-        const closeModal = document.getElementById("closeModal");
+      <!-- Navigation Arrows -->
+      <button id="prevBtn"
+        class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 z-10">
+        &#8592;
+      </button>
+      <button id="nextBtn"
+        class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 z-10">
+        &#8594;
+      </button>
+    </div>
+  </section>
 
-        images.forEach(img => {
-            img.addEventListener("click", () => {
-                modal.classList.remove("hidden");
-                modalImg.src = img.src;
-            });
-        });
+  <!-- Fullscreen Image Modal -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 hidden flex items-center justify-center z-50 p-4">
+    <span id="closeModal" class="absolute top-5 right-6 text-white text-4xl font-bold cursor-pointer">&times;</span>
+    <img id="modalImage" class="max-w-full max-h-[90vh] rounded-lg shadow-lg">
+  </div>
 
-        closeModal.addEventListener("click", () => {
-            modal.classList.add("hidden");
-        });
+  <!-- JavaScript -->
+  <script>
+    const slider = document.getElementById("eventSlider");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
 
-        modal.addEventListener("click", (e) => {
-            if (e.target === modal) {
-                modal.classList.add("hidden");
-            }
-        });
-    </script>
+    let currentIndex = 0;
+    const totalCards = slider.children.length;
 
-   <!-- Footer -->
+    // Adjust cards per view based on screen size
+    function getCardsPerView() {
+      if (window.innerWidth < 640) return 1; // mobile
+      if (window.innerWidth < 1024) return 2; // tablet
+      return 3; // desktop
+    }
+
+    function updateSlider() {
+      const cardsPerView = getCardsPerView();
+      const translateX = -(currentIndex * (100 / cardsPerView));
+      slider.style.transform = `translateX(${translateX}%)`;
+    }
+
+    nextBtn.addEventListener("click", () => {
+      const cardsPerView = getCardsPerView();
+      if (currentIndex < totalCards - cardsPerView) {
+        currentIndex++;
+        updateSlider();
+      }
+    });
+
+    prevBtn.addEventListener("click", () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateSlider();
+      }
+    });
+
+    window.addEventListener("resize", updateSlider);
+
+    // Image Modal
+    const images = document.querySelectorAll(".open-image");
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const closeModal = document.getElementById("closeModal");
+
+    images.forEach(img => {
+      img.addEventListener("click", () => {
+        modal.classList.remove("hidden");
+        modalImg.src = img.src;
+      });
+    });
+
+    closeModal.addEventListener("click", () => {
+      modal.classList.add("hidden");
+    });
+
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.add("hidden");
+      }
+    });
+  </script>
+
+  <!-- Footer -->
   <footer id="contact" class="bg-green-600 text-white py-12 mt-16 relative">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-10 text-center md:text-left">

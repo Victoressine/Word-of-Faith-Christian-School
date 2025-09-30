@@ -5,7 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Word Of Faith Christian School</title>
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
   <!-- Font Awesome 5 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -25,16 +28,15 @@
           <i class="fas fa-map-marker-alt mr-1"></i>Hospital Street, Dodowa, Accra, Ghana
         </span>
         <span class="flex items-center">
-          <i class="fas fa-envelope mr-1"></i>Email:
-          <a href="mailto:info@yourschool.com" class="ml-1 underline hover:text-green-400">
+          <i class="fas fa-envelope mr-1"></i>
+          <a href="mailto:wfcsdodowa@gmail.com" class="ml-1 underline hover:text-green-400">
             wfcsdodowa@gmail.com
           </a>
         </span>
         <span class="flex items-center">
-          <a href="tel:+233123456789"
-              class="inline-flex items-center text-slate-100 hover:text-green-400 transition">
-              <i class="fas fa-phone-alt mr-2 text-slate-100"></i> +233 (0) 50 174 6739
-            </a>
+          <a href="tel:+233501746739" class="inline-flex items-center text-slate-100 hover:text-green-400 transition">
+            <i class="fas fa-phone-alt mr-2 text-slate-100"></i> +233 (0) 50 174 6739
+          </a>
         </span>
       </div>
 
@@ -63,12 +65,10 @@
         </h1>
       </div>
 
-
       <!-- Desktop Navigation -->
       <nav class="hidden lg:flex space-x-6 text-base">
         <a href="index.html" class="relative group text-gray-800 hover:text-green-600">
           Home
-          <!-- Static Dots on Hover -->
           <span
             class="absolute left-1/2 -bottom-2 flex -translate-x-1/2 space-x-1 opacity-0 group-hover:opacity-100 transition">
             <span class="w-1 h-1 bg-green-600 rounded-full"></span>
@@ -127,8 +127,6 @@
           </span>
         </a>
 
-
-
         <!-- Gallery -->
         <div class="relative group">
           <a href="#gallery" class="hover:text-green-600 inline-flex items-center">
@@ -165,7 +163,7 @@
           </div>
         </div>
 
-        <a href="index.html#contact" class="relative group hover:text-green-600">
+        <a href="#contact" class="relative group hover:text-green-600">
           Contact
           <span
             class="absolute left-1/2 -bottom-2 flex -translate-x-1/2 space-x-1 opacity-0 group-hover:opacity-100 transition">
@@ -174,7 +172,6 @@
             <span class="w-1 h-1 bg-green-600 rounded-full"></span>
           </span>
         </a>
-
       </nav>
 
       <!-- Mobile Menu Button -->
@@ -218,7 +215,6 @@
         Facilities
       </a>
 
-
       <!-- Gallery -->
       <div>
         <button class="w-full flex justify-between items-center px-2 py-2 hover:text-green-600"
@@ -252,10 +248,11 @@
         </div>
       </div>
 
-      <a href="index.html#contact" class="block py-2 px-2 rounded hover:bg-green-100">Contact</a>
+      <a href="#contact" class="block py-2 px-2 rounded hover:bg-green-100">Contact</a>
     </div>
   </header>
 
+  <!-- JS for Mobile Dropdown -->
   <script>
     const menuBtn = document.getElementById("menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
@@ -272,70 +269,76 @@
     }
   </script>
 
-    <!-- Hero -->
-<section class="relative bg-green-600 text-white py-20 text-center">
-  <div class="max-w-4xl mx-auto px-6">
-    <h1 class="text-4xl md:text-5xl font-bold text-yellow-400 mb-4">
-      Our History, Mission & Vision
-    </h1>
-    <p class="text-lg md:text-xl text-green-100">
-      Guiding principles that shape our school’s purpose and future.
-    </p>
-  </div>
-</section>
+  <!-- Hero -->
+  <section class="relative bg-green-600 text-white py-20 text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <h1 class="text-4xl md:text-5xl font-bold text-yellow-400 mb-4">
+        Our History, Mission & Vision
+      </h1>
+      <p class="text-lg md:text-xl text-green-100">
+        Discover the values and principles that guide Word of Faith Christian School.
+      </p>
+    </div>
+  </section>
 
-<!-- History -->
-<section class="py-16 bg-slate-100">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="p-6 sm:p-10 rounded-2xl shadow-sm bg-white transition-transform hover:-translate-y-2 hover:shadow-lg">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-center text-green-700">
-        Our Story & Heritage
-      </h2>
+  <!-- History -->
+  <section class="py-16 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="p-6 sm:p-10 rounded-2xl shadow-sm bg-white transition-transform hover:-translate-y-2 hover:shadow-lg">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-center text-green-700">
+          Our Story & Heritage
+        </h2>
 
-      <!-- Line with Icon -->
-      <div class="flex items-center justify-center mb-6">
-        <div class="flex-grow border-t border-green-600"></div>
-        <div class="mx-4 text-green-600">
-          <i class="fas fa-star"></i>
+        <!-- Line with Icon -->
+        <div class="flex items-center justify-center mb-6">
+          <div class="flex-grow border-t border-green-600"></div>
+          <div class="mx-4 text-green-600">
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="flex-grow border-t border-green-600"></div>
         </div>
-        <div class="flex-grow border-t border-green-600"></div>
+
+        <p class="text-gray-700 mb-4 text-base sm:text-lg md:text-xl text-center">
+          Word of Faith Christian School was established to provide quality Christ-centered education
+          rooted in academic excellence, discipline, and moral integrity. Our heritage is built on
+          nurturing students to grow in knowledge, faith, and leadership, preparing them to excel in
+          every sphere of life.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="py-16 bg-slate-100">
+    <div class="max-w-7xl mx-auto grid gap-6 md:grid-cols-2 px-6">
+
+      <!-- Mission Box -->
+      <div
+        class="p-6 rounded-2xl shadow-sm bg-white flex flex-col transition-transform hover:-translate-y-2 hover:shadow-lg">
+        <h2 class="text-2xl lg:text-3xl font-bold mb-4 text-green-700">Our Mission</h2>
+        <p class="text-base md:text-lg text-slate-600 leading-relaxed">
+          To provide a holistic Christian education that develops the mind, body, and spirit.
+          We are committed to empowering students with academic knowledge, practical skills,
+          and biblical values to influence society positively.
+        </p>
       </div>
 
-      <p class="text-gray-700 mb-4 text-base sm:text-lg md:text-xl text-center">
-        A warm welcome to K-OAK School. As the headmaster of K-Oak School, I want to express my gratitude for entrusting
-        us with the education and care of your children. Our school is dedicated to providing a nurturing and stimulating
-        environment where your child can thrive and grow.
-      </p>
+      <!-- Vision Box -->
+      <div
+        class="p-6 rounded-2xl shadow-sm bg-white flex flex-col transition-transform hover:-translate-y-2 hover:shadow-lg">
+        <h2 class="text-2xl lg:text-3xl font-bold mb-4 text-green-700">Our Vision</h2>
+        <p class="text-base md:text-lg text-slate-600 leading-relaxed">
+          To be a distinguished Christian school known for academic excellence, strong moral values,
+          and spiritual growth, raising future leaders who will impact the world with wisdom,
+          creativity, and godly character.
+        </p>
+      </div>
+
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Mission & Vision -->
-<section class="py-16 bg-slate-100">
-  <div class="max-w-7xl mx-auto grid gap-6 md:grid-cols-2 px-6">
-    
-    <!-- Mission Box -->
-    <div class="p-6 rounded-2xl shadow-sm bg-white flex flex-col transition-transform hover:-translate-y-2 hover:shadow-lg">
-      <h2 class="text-2xl lg:text-3xl font-bold mb-4 text-green-700">Our Mission</h2>
-      <p class="text-base md:text-lg text-slate-600 leading-relaxed">
-        To provide a nurturing learning environment that empowers students with knowledge, character, and skills
-        to thrive academically, socially, and spiritually while preparing them to contribute positively to society.
-      </p>
-    </div>
 
-    <!-- Vision Box -->
-    <div class="p-6 rounded-2xl shadow-sm bg-white flex flex-col transition-transform hover:-translate-y-2 hover:shadow-lg">
-      <h2 class="text-2xl lg:text-3xl font-bold mb-4 text-green-700">Our Vision</h2>
-      <p class="text-base md:text-lg text-slate-600 leading-relaxed">
-        To be a leading center of academic excellence, innovation, and moral integrity, shaping future leaders who
-        will impact the world with wisdom, creativity, and compassion.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-    <!-- Footer -->
+  <!-- Footer -->
   <footer id="contact" class="bg-green-600 text-white py-12 mt-16 relative">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-10 text-center md:text-left">

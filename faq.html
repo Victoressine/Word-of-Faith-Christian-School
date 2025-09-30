@@ -5,7 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Word Of Faith Christian School</title>
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
   <!-- Font Awesome 5 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -25,16 +28,15 @@
           <i class="fas fa-map-marker-alt mr-1"></i>Hospital Street, Dodowa, Accra, Ghana
         </span>
         <span class="flex items-center">
-          <i class="fas fa-envelope mr-1"></i>Email:
-          <a href="mailto:info@yourschool.com" class="ml-1 underline hover:text-green-400">
+          <i class="fas fa-envelope mr-1"></i>
+          <a href="mailto:wfcsdodowa@gmail.com" class="ml-1 underline hover:text-green-400">
             wfcsdodowa@gmail.com
           </a>
         </span>
         <span class="flex items-center">
-          <a href="tel:+233123456789"
-              class="inline-flex items-center text-slate-100 hover:text-green-400 transition">
-              <i class="fas fa-phone-alt mr-2 text-slate-100"></i> +233 (0) 50 174 6739
-            </a>
+          <a href="tel:+233501746739" class="inline-flex items-center text-slate-100 hover:text-green-400 transition">
+            <i class="fas fa-phone-alt mr-2 text-slate-100"></i> +233 (0) 50 174 6739
+          </a>
         </span>
       </div>
 
@@ -63,12 +65,10 @@
         </h1>
       </div>
 
-
       <!-- Desktop Navigation -->
       <nav class="hidden lg:flex space-x-6 text-base">
         <a href="index.html" class="relative group text-gray-800 hover:text-green-600">
           Home
-          <!-- Static Dots on Hover -->
           <span
             class="absolute left-1/2 -bottom-2 flex -translate-x-1/2 space-x-1 opacity-0 group-hover:opacity-100 transition">
             <span class="w-1 h-1 bg-green-600 rounded-full"></span>
@@ -127,8 +127,6 @@
           </span>
         </a>
 
-
-
         <!-- Gallery -->
         <div class="relative group">
           <a href="#gallery" class="hover:text-green-600 inline-flex items-center">
@@ -165,7 +163,7 @@
           </div>
         </div>
 
-        <a href="index.html#contact" class="relative group hover:text-green-600">
+        <a href="#contact" class="relative group hover:text-green-600">
           Contact
           <span
             class="absolute left-1/2 -bottom-2 flex -translate-x-1/2 space-x-1 opacity-0 group-hover:opacity-100 transition">
@@ -174,7 +172,6 @@
             <span class="w-1 h-1 bg-green-600 rounded-full"></span>
           </span>
         </a>
-
       </nav>
 
       <!-- Mobile Menu Button -->
@@ -218,7 +215,6 @@
         Facilities
       </a>
 
-
       <!-- Gallery -->
       <div>
         <button class="w-full flex justify-between items-center px-2 py-2 hover:text-green-600"
@@ -252,10 +248,11 @@
         </div>
       </div>
 
-      <a href="index.html#contactt" class="block py-2 px-2 rounded hover:bg-green-100">Contact</a>
+      <a href="#contact" class="block py-2 px-2 rounded hover:bg-green-100">Contact</a>
     </div>
   </header>
 
+  <!-- JS for Mobile Dropdown -->
   <script>
     const menuBtn = document.getElementById("menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
@@ -272,80 +269,103 @@
     }
   </script>
 
-    <!-- Hero -->
-    <section class="relative bg-green-600 text-white py-20 text-center">
-        <div class="max-w-4xl mx-auto px-6">
-            <h1 class="text-4xl md:text-5xl font-bold text-yellow-400 mb-4">Frequently Asked Questions</h1>
-            <p class="text-lg md:text-xl text-green-100">Find answers to common questions about admissions, academics,
-                and more.</p>
+  <!-- Hero -->
+  <section class="relative bg-green-600 text-white py-20 text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <h1 class="text-4xl md:text-5xl font-bold text-yellow-400 mb-4">
+        Frequently Asked Questions
+      </h1>
+      <p class="text-lg md:text-xl text-green-100">
+        Find answers to common questions about admissions, academics, and more.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="space-y-4">
+
+        <!-- FAQ Item -->
+        <div class="bg-white rounded-lg shadow-md">
+          <button
+            class="w-full text-left px-6 py-4 flex justify-between items-center font-semibold text-lg text-green-600 focus:outline-none faq-toggle">
+            What are the admission requirements?
+            <i class="fas fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="faq-content px-6 pb-4 hidden text-gray-700">
+            Applicants must submit a completed admission form, a birth certificate, previous school reports/results,
+            and two passport-sized photographs. All students are also required to take an entrance exam and/or attend an
+            interview.
+          </div>
         </div>
-    </section>
 
-    <!-- FAQ Section -->
-    <section class="py-16 bg-slate-100">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="space-y-4">
-                <!-- FAQ Item -->
-                <div class="bg-white rounded-lg shadow-md">
-                    <button
-                        class="w-full text-left px-6 py-4 flex justify-between items-center font-semibold text-lg text-green-600 focus:outline-none faq-toggle">
-                        What are the admission requirements?
-                        <i class="fas fa-chevron-down transition-transform"></i>
-                    </button>
-                    <div class="faq-content px-6 pb-4 hidden text-gray-700">
-                        Students must provide previous school records, a completed application form, and sit for an
-                        entrance exam.
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-md">
-                    <button
-                        class="w-full text-left px-6 py-4 flex justify-between items-center font-semibold text-lg text-green-600 focus:outline-none faq-toggle">
-                        Do you provide boarding facilities?
-                        <i class="fas fa-chevron-down transition-transform"></i>
-                    </button>
-                    <div class="faq-content px-6 pb-4 hidden text-gray-700">
-                        Yes, we provide safe and well-supervised boarding facilities for students of all levels.
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-md">
-                    <button
-                        class="w-full text-left px-6 py-4 flex justify-between items-center font-semibold text-lg text-green-600 focus:outline-none faq-toggle">
-                        What extracurricular activities are available?
-                        <i class="fas fa-chevron-down transition-transform"></i>
-                    </button>
-                    <div class="faq-content px-6 pb-4 hidden text-gray-700">
-                        Students can join sports teams, drama club, music, arts, debate, and cultural activities.
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-md">
-                    <button
-                        class="w-full text-left px-6 py-4 flex justify-between items-center font-semibold text-lg text-green-600 focus:outline-none faq-toggle">
-                        How do I apply for admission?
-                        <i class="fas fa-chevron-down transition-transform"></i>
-                    </button>
-                    <div class="faq-content px-6 pb-4 hidden text-gray-700">
-                        Applications can be submitted online through our website or at the school’s admissions office.
-                    </div>
-                </div>
-            </div>
+        <div class="bg-white rounded-lg shadow-md">
+          <button
+            class="w-full text-left px-6 py-4 flex justify-between items-center font-semibold text-lg text-green-600 focus:outline-none faq-toggle">
+            Do you provide boarding facilities?
+            <i class="fas fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="faq-content px-6 pb-4 hidden text-gray-700">
+            Yes, Word of Faith Christian School provides safe and well-supervised boarding facilities with a nurturing
+            environment that supports both academic and spiritual growth.
+          </div>
         </div>
-    </section>
 
-    <script>
-        document.querySelectorAll(".faq-toggle").forEach(button => {
-            button.addEventListener("click", () => {
-                const content = button.nextElementSibling;
-                const icon = button.querySelector("i");
-                content.classList.toggle("hidden");
-                icon.classList.toggle("rotate-180");
-            });
-        });
-    </script>
+        <div class="bg-white rounded-lg shadow-md">
+          <button
+            class="w-full text-left px-6 py-4 flex justify-between items-center font-semibold text-lg text-green-600 focus:outline-none faq-toggle">
+            What curriculum do you follow?
+            <i class="fas fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="faq-content px-6 pb-4 hidden text-gray-700">
+            We run the Oxford International Curriculum alongside the Ghana Education Service (GES) standards, enriched
+            with Christian values. The program integrates academics, ICT, leadership, moral education, and life skills.
+          </div>
+        </div>
 
-    <!-- Footer -->
+        <div class="bg-white rounded-lg shadow-md">
+          <button
+            class="w-full text-left px-6 py-4 flex justify-between items-center font-semibold text-lg text-green-600 focus:outline-none faq-toggle">
+            What extracurricular activities are available?
+            <i class="fas fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="faq-content px-6 pb-4 hidden text-gray-700">
+            Students participate in sports (football, volleyball, athletics, table tennis), cultural activities (drama,
+            music, dance), academic clubs (debate, science, quiz), and faith-based groups such as Scripture Union and
+            Bible study.
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md">
+          <button
+            class="w-full text-left px-6 py-4 flex justify-between items-center font-semibold text-lg text-green-600 focus:outline-none faq-toggle">
+            How do I apply for admission?
+            <i class="fas fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="faq-content px-6 pb-4 hidden text-gray-700">
+            Admission forms can be downloaded from our website or collected at the school office. Completed forms should
+            be submitted with the required documents. Successful applicants will be contacted after the entrance exam
+            and interview.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll(".faq-toggle").forEach(button => {
+      button.addEventListener("click", () => {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector("i");
+        content.classList.toggle("hidden");
+        icon.classList.toggle("rotate-180");
+      });
+    });
+  </script>
+
+  <!-- Footer -->
   <footer id="contact" class="bg-green-600 text-white py-12 mt-16 relative">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-10 text-center md:text-left">
