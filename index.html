@@ -5,7 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Word Of Faith Christian School</title>
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
   <!-- Font Awesome 5 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -25,13 +28,13 @@
           <i class="fas fa-map-marker-alt mr-1"></i>Hospital Street, Dodowa, Accra, Ghana
         </span>
         <span class="flex items-center">
-          <i class="fas fa-envelope mr-1"></i>Email:
-          <a href="mailto:info@yourschool.com" class="ml-1 underline hover:text-green-400">
+          <i class="fas fa-envelope mr-1"></i>
+          <a href="mailto:wfcsdodowa@gmail.com" class="ml-1 underline hover:text-green-400">
             wfcsdodowa@gmail.com
           </a>
         </span>
         <span class="flex items-center">
-          <a href="tel:+233123456789" class="inline-flex items-center text-slate-100 hover:text-green-400 transition">
+          <a href="tel:+233501746739" class="inline-flex items-center text-slate-100 hover:text-green-400 transition">
             <i class="fas fa-phone-alt mr-2 text-slate-100"></i> +233 (0) 50 174 6739
           </a>
         </span>
@@ -62,12 +65,10 @@
         </h1>
       </div>
 
-
       <!-- Desktop Navigation -->
       <nav class="hidden lg:flex space-x-6 text-base">
         <a href="index.html" class="relative group text-gray-800 hover:text-green-600">
           Home
-          <!-- Static Dots on Hover -->
           <span
             class="absolute left-1/2 -bottom-2 flex -translate-x-1/2 space-x-1 opacity-0 group-hover:opacity-100 transition">
             <span class="w-1 h-1 bg-green-600 rounded-full"></span>
@@ -126,8 +127,6 @@
           </span>
         </a>
 
-
-
         <!-- Gallery -->
         <div class="relative group">
           <a href="#gallery" class="hover:text-green-600 inline-flex items-center">
@@ -173,7 +172,6 @@
             <span class="w-1 h-1 bg-green-600 rounded-full"></span>
           </span>
         </a>
-
       </nav>
 
       <!-- Mobile Menu Button -->
@@ -217,7 +215,6 @@
         Facilities
       </a>
 
-
       <!-- Gallery -->
       <div>
         <button class="w-full flex justify-between items-center px-2 py-2 hover:text-green-600"
@@ -255,6 +252,7 @@
     </div>
   </header>
 
+  <!-- JS for Mobile Dropdown -->
   <script>
     const menuBtn = document.getElementById("menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
@@ -274,13 +272,14 @@
 
   <!-- Hero Section -->
   <section id="home"
-    class="relative h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden border-2 border-green-600 rounded-lg text-white">
+    class="relative h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden border-2 border-green-600 rounded-lg text-white scroll-smooth">
+
     <!-- Slides -->
     <div id="slides" class="absolute inset-0">
       <!-- Slide 1 -->
       <div
         class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0 scale-100 flex flex-col items-center justify-center px-6"
-        style="background-image: url('images/heroimage1.jpeg');">
+        style="background-image: url('images/photo001.png');">
         <h2 class="text-3xl md:text-5xl font-bold bg-black/50 px-4 py-2 rounded text-green-600">DREAM</h2>
         <p class="mt-4 max-w-2xl bg-black/40 px-4 py-2 rounded text-yellow-400">
           Believe in the power of education. At [Your School], we create a safe, happy, and fun learning space.
@@ -290,7 +289,7 @@
       <!-- Slide 2 -->
       <div
         class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0 scale-100 flex flex-col items-center justify-center px-6"
-        style="background-image: url('images/heroimage2.jpeg');">
+        style="background-image: url('images/school001.png');">
         <h2 class="text-3xl md:text-5xl font-bold bg-black/50 px-4 py-2 rounded">BELIEVE</h2>
         <p class="mt-4 max-w-2xl bg-black/40 px-4 py-2 rounded">
           We nurture confidence and growth, empowering students to achieve their best potential.
@@ -300,7 +299,7 @@
       <!-- Slide 3 -->
       <div
         class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0 scale-100 flex flex-col items-center justify-center px-6"
-        style="background-image: url('images/heroimage3.jpeg');">
+        style="background-image: url('images/photo003.png');">
         <h2 class="text-3xl md:text-5xl font-bold bg-black/50 px-4 py-2 rounded">ACHIEVE</h2>
         <p class="mt-4 max-w-2xl bg-black/40 px-4 py-2 rounded">
           Our mission is to provide high-quality education that prepares students for a brighter future.
@@ -310,103 +309,113 @@
       <!-- Slide 4 -->
       <div
         class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0 scale-100 flex flex-col items-center justify-center px-6"
-        style="background-image: url('images/heroimage4.jpeg');">
+        style="background-image: url('images/photo004.png');">
         <h2 class="text-3xl md:text-5xl font-bold bg-black/50 px-4 py-2 rounded">INSPIRE</h2>
         <p class="mt-4 max-w-2xl bg-black/40 px-4 py-2 rounded">
           Learning is a journey. We inspire curiosity, creativity, and lifelong skills in every student.
         </p>
       </div>
     </div>
+
+    <!-- Navigation Arrows -->
+    <button id="prev"
+      class="absolute top-1/2 left-4 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-green-600 transition">
+      &#10094;
+    </button>
+    <button id="next"
+      class="absolute top-1/2 right-4 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-green-600 transition">
+      &#10095;
+    </button>
   </section>
 
-  <!-- Side Buttons -->
-  <button id="prev"
-    class="absolute left-4 top-1/2 -translate-y-1/2 bg-green-600 text-white p-3 rounded-full z-10 hover:bg-green-700 transition">
-    &#10094;
-  </button>
-  <button id="next"
-    class="absolute right-4 top-1/2 -translate-y-1/2 bg-green-600 text-white p-3 rounded-full z-10 hover:bg-green-700 transition">
-    &#10095;
-  </button>
-  </section>
+  <!-- Add this inside your <html> or <body> tag -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+      /* Smooth scrolling for all links */
+    }
+  </style>
 
-  <!-- JavaScript for Zoom Fade Slideshow with Buttons -->
   <script>
-    const slides = document.querySelectorAll("#slides > div");
-    let index = 0;
+    // Simple slider script
+    const slides = document.querySelectorAll('#slides > div');
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+    let current = 0;
 
-    function showSlide(i) {
-      slides.forEach((slide, idx) => {
-        if (idx === i) {
-          slide.style.opacity = 1;
-          slide.style.transform = "scale(1.1)"; // zoom in
-        } else {
-          slide.style.opacity = 0;
-          slide.style.transform = "scale(1)"; // reset zoom
-        }
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.opacity = i === index ? "1" : "0";
       });
     }
 
-    document.getElementById("next").addEventListener("click", () => {
-      index = (index + 1) % slides.length;
-      showSlide(index);
+    next.addEventListener('click', () => {
+      current = (current + 1) % slides.length;
+      showSlide(current);
     });
 
-    document.getElementById("prev").addEventListener("click", () => {
-      index = (index - 1 + slides.length) % slides.length;
-      showSlide(index);
+    prev.addEventListener('click', () => {
+      current = (current - 1 + slides.length) % slides.length;
+      showSlide(current);
     });
 
-    // Auto-slide every 10 seconds
+    // Auto-play
     setInterval(() => {
-      index = (index + 1) % slides.length;
-      showSlide(index);
-    }, 10000);
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }, 20000);
 
-    // Initial slide
-    showSlide(index);
+    // Show first slide on load
+    showSlide(current);
   </script>
 
-  <!-- Headmaster's Address Section -->
-  <section id="headmaster-address" class="bg-slate-100">
 
-    <!-- Text Content with Styled Background -->
+  <!-- Headmaster's Address Section -->
+  <section id="headmaster-address" class="bg-slate-100 scroll-smooth">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-12 sm:py-16 lg:py-20">
-      <div class="p-2 sm:p-8 rounded-2xl shadow-sm bg-white transition-transform hover:-translate-y-2 hover:shadow-lg">
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-center">Headmaster's Address/Welcome Message
+      <div class="p-4 sm:p-8 rounded-2xl shadow-sm bg-white transition-transform hover:-translate-y-2 hover:shadow-lg">
+
+        <!-- Title -->
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-center text-green-700">
+          Headmaster's Address
         </h2>
 
-        <!-- Line with Icon -->
+        <!-- Decorative Line with Icon -->
         <div class="flex items-center justify-center mb-6">
           <div class="flex-grow border-t border-green-600"></div>
           <div class="mx-4 text-green-600">
-            <!-- You can use any icon here. Example: Font Awesome star -->
             <i class="fas fa-star"></i>
           </div>
           <div class="flex-grow border-t border-green-600"></div>
         </div>
 
-        <p class="text-gray-700 mb-4 text-base sm:text-lg md:text-xl">
-          Welcome to Word of Faith Christian School. At Word of Faith Christian School, we nurture every child to shine brightly in
-          faith, knowledge and character. Established in 1989, our Christ-centered institution delivers academic
-          excellence and spiritual growth in a loving, disciplined environment. From Nursery to Senior High School, we
-          integrate biblical principles with a robust curriculum, including our newly accredited Oxford International
-          Curriculum, alongside the Ghana Education Service (GES) standards, to develop the whole child—mind, body, and
-          spirit.
-        </p>
-        <br>
-        <p class="text-gray-700 mb-4 text-base sm:text-lg md:text-xl">
-          Welcome to Word of Faith Christian School. At Word of Faith Christian School, we nurture every child to shine brightly in
-          faith, knowledge and character. Established in 1989, our Christ-centered institution delivers academic
-          excellence and spiritual growth in a loving, disciplined environment. From Nursery to Senior High School, we
-          integrate biblical principles with a robust curriculum, including our newly accredited Oxford International
-          Curriculum, alongside the Ghana Education Service (GES) standards, to develop the whole child—mind, body, and
-          spirit.
-        </p>
-        <p class="text-gray-700 font-serif italic text-left text-base sm:text-lg md:text-xl">
-          MR. NAME
+        <!-- Message -->
+        <p class="text-gray-700 mb-6 text-base sm:text-lg md:text-xl leading-relaxed text-justify">
+          Welcome to <span class="font-semibold text-green-700">Word of Faith Christian School</span>.
+          Here, we believe every child is a gift from God, created with unique potential to impact the world.
+          Since our establishment in 1989, our Christ-centered community has been committed to nurturing students
+          in faith, knowledge, and character.
         </p>
 
+        <p class="text-gray-700 mb-6 text-base sm:text-lg md:text-xl leading-relaxed text-justify">
+          We combine strong academic foundations with spiritual growth, guided by biblical principles and
+          discipline in love. From Preschool to Senior High School, our students benefit from the Ghana Education
+          Service (GES) curriculum as well as our newly accredited <span class="font-medium">Oxford International
+            Curriculum</span>,
+          preparing them to excel both locally and globally.
+        </p>
+
+        <p class="text-gray-700 mb-8 text-base sm:text-lg md:text-xl leading-relaxed text-justify">
+          At Word of Faith Christian School, our mission is to develop the whole child—mind, body, and spirit—equipping
+          them to shine as lights in their generation. We are honoured to partner with parents in raising students who
+          will lead with wisdom, faith, and integrity.
+        </p>
+
+        <!-- Signature -->
+        <p class="text-gray-700 font-serif italic text-right text-base sm:text-lg md:text-xl">
+          Mr. [Headmaster's Full Name] <br>
+          <span class="not-italic font-medium">Headmaster</span>
+        </p>
       </div>
     </div>
   </section>
@@ -414,21 +423,29 @@
 
   <!-- Hero Section with True Parallax Background -->
   <div class="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] 
-            bg-cover bg-center bg-no-repeat bg-fixed" style="background-image: url('images/heroimage4.jpeg');">
+            bg-cover bg-center bg-no-repeat bg-fixed" style="background-image: url('images/photo003.png');">
 
     <!-- Gradient Overlay with Blur and Tint -->
-    <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/30 backdrop-blur-sm"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/20 backdrop-blur-sm"></div>
 
     <!-- Overlay Text with Semi-Transparent Background -->
     <div class="absolute inset-0 flex items-center justify-center px-4">
       <div class="bg-black/50 p-4 sm:p-6 md:p-8 rounded-lg text-center max-w-5xl">
+
+        <!-- School Name -->
         <h1
           class="w-full max-w-6xl text-center lg:text-left text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-yellow-400 mx-auto px-4">
           Word Of Faith Christian School
         </h1>
 
+        <!-- Location -->
         <p class="mt-2 text-base sm:text-lg md:text-xl lg:text-2xl text-white">
-          Accra-Ghana
+          Accra, Ghana
+        </p>
+
+        <!-- Motto / Verse -->
+        <p class="mt-4 text-sm sm:text-base md:text-lg lg:text-xl italic text-green-200">
+          “Raising a generation of faith-filled leaders with wisdom, knowledge, and godly character.”
         </p>
       </div>
     </div>
@@ -436,16 +453,16 @@
 
 
   <!-- About Section -->
-  <section id="about" class="py-12 sm:py-16 lg:py-20 bg-slate-100">
+  <section id="about" class="py-12 sm:py-16 lg:py-20 bg-slate-100 scroll-smooth">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <!-- Text Content with Styled Background -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-      <div class="p-2 sm:p-8 rounded-2xl shadow-sm bg-white transition-transform hover:-translate-y-2 hover:shadow-lg">
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-center">About Us</h2>
-        <h3 class="text-xl sm:text-xl md:text-xl font-bold text-gray-600 mb-4 text-center">Our Story & Heritage</h3>
+      <!-- About Us Card -->
+      <div class="p-4 sm:p-8 rounded-2xl shadow-sm bg-white transition-transform hover:-translate-y-2 hover:shadow-lg">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-center text-green-700">About Us</h2>
+        <h3 class="text-lg sm:text-xl md:text-2xl font-semibold text-gray-600 mb-4 text-center">Our Story & Heritage
+        </h3>
 
-
-        <!-- Line with Icon -->
+        <!-- Decorative Line -->
         <div class="flex items-center justify-center mb-6">
           <div class="flex-grow border-t border-green-600"></div>
           <div class="mx-4 text-green-600">
@@ -454,38 +471,41 @@
           <div class="flex-grow border-t border-green-600"></div>
         </div>
 
-        <p class="text-gray-700 mb-4 text-base sm:text-lg md:text-xl text-center">
-          A warm welcome to K-OAK School. As the headmaster of K-Oak School, I want to express my gratitude for
-          entrusting us with the education and care of your children. Our school is dedicated to providing a nurturing
-          and stimulating environment where your child can thrive and grow.
+        <!-- Intro Text -->
+        <p class="text-gray-700 mb-4 text-base sm:text-lg md:text-xl leading-relaxed text-justify">
+          Welcome to <span class="font-semibold text-green-700">Word of Faith Christian School</span>.
+          Since our founding in 1989, we have been committed to raising generations of students
+          who excel academically, grow spiritually, and uphold moral integrity. Rooted in Christian values,
+          our school provides a nurturing environment where children are encouraged to dream, believe, achieve, and
+          inspire.
         </p>
       </div>
 
-      <!-- Story & Image Grid -->
+      <!-- Mission & Vision Grid -->
       <div class="mt-8 grid gap-6 md:grid-cols-2 items-stretch max-w-7xl mx-auto">
 
-        <!-- Mission & Vission Box -->
-        <div class="p-4 sm:p-6 rounded-2xl shadow-sm bg-white flex flex-col max-h-[28rem] overflow-hidden">
+        <!-- Mission & Vision Box -->
+        <div class="p-4 sm:p-6 rounded-2xl shadow-sm bg-white flex flex-col">
           <h2
-            class="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 bg-gradient-to-r from-green-600 via-yellow-400 to-black text-transparent bg-clip-text">
-            Our Mission, Vission & Values
+            class="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 bg-gradient-to-r from-green-600 via-yellow-400 to-black text-transparent bg-clip-text">
+            Our Mission & Vision
           </h2>
 
-
-          <ul class="space-y-2 text-sm sm:text-base text-slate-600 flex-1 overflow-hidden">
-            <li><strong>Our Mission:</strong> With a rich history of academic excellence and community involvement, we
-              continue to build on our strong foundation while embracing innovation and modern educational practices.
+          <ul class="space-y-4 text-sm sm:text-base md:text-lg text-slate-700 flex-1">
+            <li>
+              <strong class="text-green-700">Mission:</strong>
+              “To provide a Christ-centered, holistic education that fosters academic excellence,
+              moral integrity, and global citizenship.”
             </li>
-            <li><strong>Our Vission:</strong> We are proud of our diverse and inclusive community where students from
-              various backgrounds come together to learn, grow, and succeed.
-            </li>
-            <li><strong>Our Values:</strong> We are proud of our diverse and inclusive community where students from
-              various backgrounds come together to learn, grow, and succeed.
+            <li>
+              <strong class="text-green-700">Vision:</strong>
+              “To inspire a community of lifelong learners who embody Christian values, achieve academic excellence,
+              uphold moral integrity, and contribute positively as global citizens.”
             </li>
           </ul>
 
-          <div>
-            <a href="#" class="inline-flex items-center text-green-600 font-semibold hover:underline group">
+          <div class="mt-4">
+            <a href="mission.html" class="inline-flex items-center text-green-600 font-semibold hover:underline group">
               Read More
               <svg xmlns="http://www.w3.org/2000/svg"
                 class="h-5 w-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24"
@@ -496,20 +516,20 @@
           </div>
         </div>
 
-        <!-- Image Box that matches Story Box height -->
-        <div class="flex max-h-[28rem] overflow-hidden rounded-2xl shadow-sm border-2 border-green-600">
-          <img src="images/heroimage4.jpeg" alt="School Banner"
+        <!-- Image Box -->
+        <div class="flex max-h-[28rem] overflow-hidden rounded-2xl shadow-sm border-2 border-green-600"> <img
+            src="images/mv000.png" alt="School Banner"
             class="w-full h-full object-cover transform transition-transform duration-700 hover:scale-110 rounded-2xl" />
         </div>
       </div>
     </div>
   </section>
 
-
   <!-- Academics, Facilities & Admissions Section -->
-  <section class="bg-slate-100 py-2">
-    <div class="max-w-7xl mx-auto px-2 text-center">
-      <h2 class="text-3xl sm:text-4xl font-bold mb-12">Explore Our School</h2>
+  <section id="explore" class="bg-slate-100 py-12 scroll-smooth">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl text-green-600 font-bold mb-12">Explore Our School</h2>
+
       <!-- Line with Icon -->
       <div class="flex items-center justify-center mb-6">
         <div class="flex-grow border-t border-green-600"></div>
@@ -519,24 +539,26 @@
         <div class="flex-grow border-t border-green-600"></div>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
+      <!-- Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
 
         <!-- Academics Card -->
         <div
           class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
-
           <!-- Image -->
           <div class="mb-6 overflow-hidden rounded-2xl">
-            <img src="images/heroimage1.jpeg" alt="Academics"
+            <img src="images/academics009.png" alt="Academics"
               class="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-500 hover:scale-105">
           </div>
 
           <!-- Content -->
           <h3 class="text-xl font-semibold mb-4">Academics</h3>
-          <p class="text-gray-600 mb-6">
-            Our curriculum engages students in dynamic learning experiences, fostering critical thinking, creativity,
-            and a lifelong love of learning. Passionate educators provide personalised support to help each student
-            thrive academically.
+          <p class="text-gray-600 mb-6 text-sm sm:text-base md:text-lg">
+            Our academic program fosters intellectual growth, creativity, and spiritual development.
+            We proudly offer the <strong>Oxford International Curriculum</strong> alongside the
+            <strong>Ghana Education Service (GES) curriculum</strong>, enriched with Christian values to build a strong
+            moral foundation.
           </p>
 
           <a href="academics.html" class="inline-flex items-center text-green-600 font-semibold hover:underline group">
@@ -546,24 +568,23 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
           </a>
-
         </div>
 
         <!-- Facilities Card -->
         <div
           class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
-
           <!-- Image -->
           <div class="mb-6 overflow-hidden rounded-2xl">
-            <img src="images/heroimage2.jpeg" alt="Facilities"
+            <img src="images/bo005.jpg" alt="Facilities"
               class="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-500 hover:scale-105">
           </div>
 
           <!-- Content -->
           <h3 class="text-xl font-semibold mb-4">Facilities</h3>
-          <p class="text-gray-600 mb-6">
-            Our campus provides state-of-the-art classrooms, safe play areas, and dedicated spaces for arts, sports, and
-            technology. Facilities support academic excellence, creativity, and physical well-being for every student.
+          <p class="text-gray-600 mb-6 text-sm sm:text-base md:text-lg">
+            Our campus provides state-of-the-art classrooms, safe play areas, and dedicated spaces for
+            <strong>arts, sports, ICT, and worship</strong>. Every facility is designed to support academic excellence,
+            creativity, physical well-being, and spiritual growth of our students.
           </p>
 
           <a href="facilities.html" class="inline-flex items-center text-green-600 font-semibold hover:underline group">
@@ -573,24 +594,23 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
           </a>
-
         </div>
 
         <!-- Admissions Card -->
         <div
           class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
-
           <!-- Image -->
           <div class="mb-6 overflow-hidden rounded-2xl">
-            <img src="images/heroimage3.jpeg" alt="Admissions"
+            <img src="images/admissions002.jpg" alt="Admissions"
               class="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-500 hover:scale-105">
           </div>
 
           <!-- Content -->
           <h3 class="text-xl font-semibold mb-4">Admissions</h3>
-          <p class="text-gray-600 mb-6">
-            Our admissions process helps you explore what K-Oak offers and ensures the school is the right fit for your
-            child. Discover how we create a supportive, vibrant environment where students can thrive.
+          <p class="text-gray-600 mb-6 text-sm sm:text-base md:text-lg">
+            Our admissions process is simple and transparent. We require an admission form, previous school reports,
+            a birth certificate, and an entrance assessment. Affordable fees and discounts for early payments make
+            <strong>quality Christian education accessible</strong> to all families.
           </p>
 
           <a href="admissions.html" class="inline-flex items-center text-green-600 font-semibold hover:underline group">
@@ -600,40 +620,116 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
           </a>
-
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- Parallax Background -->
-  <div
-    class="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] bg-cover bg-center bg-no-repeat bg-fixed"
-    style="background-image: url('images/heroimage4.jpeg');">
 
-    <!-- Overlay with Blur and Color Tint -->
-    <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+  <!-- Hero Section with Stats Overlay -->
+  <section id="community-hero" class="relative w-full h-[320px] sm:h-[420px] md:h-[520px] lg:h-[620px] xl:h-[720px] 
+  bg-cover bg-center bg-no-repeat bg-fixed scroll-smooth" style="background-image: url('images/school001.png');">
 
-    <!-- Overlay Text with Semi-Transparent Background -->
+    <!-- Gradient Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/20 backdrop-blur-sm"></div>
+
+    <!-- Overlay Content -->
     <div class="absolute inset-0 flex items-center justify-center px-4">
-      <div class="bg-black/50 p-4 sm:p-6 md:p-8 rounded-lg text-center max-w-3xl">
-        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-yellow-400 leading-tight">
-          COMMUNITY
+      <div class="bg-black/50 p-4 sm:p-6 md:p-8 rounded-lg text-center max-w-4xl lg:max-w-5xl">
+
+        <!-- School Name -->
+        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 
+      font-bold text-yellow-400 leading-tight">
+          Word of Faith Christian School Community
         </h1>
-        <p class="mt-2 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-white">
-          Latest Updates In Our School Community.
+
+        <!-- Motto -->
+        <p class="mt-4 text-sm sm:text-base md:text-lg lg:text-xl italic text-green-200 leading-relaxed">
+          “Raising a community of faith-filled learners who live out Christian values, strive for academic excellence,
+          and serve others with godly character.”
         </p>
       </div>
     </div>
-  </div>
+
+    <!-- Stats Floating -->
+    <div class="absolute bottom-1 sm:bottom-6 right-1/2 sm:right-6 translate-x-1/2 sm:translate-x-0 
+              bg-black/40 backdrop-blur-sm rounded-lg 
+              p-4 sm:p-6 grid grid-cols-3 gap-6 text-center w-[95%] sm:w-auto">
+
+      <!-- Students -->
+      <div>
+        <div class="text-3xl sm:text-4xl font-extrabold text-yellow-400">
+          <span class="counter" data-target="150">0</span><span class="text-lg">+</span>
+        </div>
+        <div class="text-sm sm:text-base text-white">Students</div>
+      </div>
+
+      <!-- Teachers -->
+      <div>
+        <div class="text-3xl sm:text-4xl font-extrabold text-yellow-400">
+          <span class="counter" data-target="32">0</span><span class="text-lg">+</span>
+        </div>
+        <div class="text-sm sm:text-base text-white">Teachers</div>
+      </div>
+
+      <!-- Families -->
+      <div>
+        <div class="text-3xl sm:text-4xl font-extrabold text-yellow-400">
+          <span class="counter" data-target="130">0</span><span class="text-lg">+</span>
+        </div>
+        <div class="text-sm sm:text-base text-white">Families</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Counter Animation Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const counters = document.querySelectorAll('.counter');
+      const options = { root: null, rootMargin: '0px', threshold: 0.3 };
+
+      function animateCounter(el) {
+        const target = +el.getAttribute('data-target');
+        const duration = 1200;
+        const startTime = performance.now();
+
+        function tick(now) {
+          const elapsed = now - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.floor(target * eased);
+          if (progress < 1) {
+            requestAnimationFrame(tick);
+          } else {
+            el.textContent = target;
+          }
+        }
+        requestAnimationFrame(tick);
+      }
+
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            obs.unobserve(entry.target);
+          }
+        });
+      }, options);
+
+      counters.forEach(c => observer.observe(c));
+    });
+  </script>
+
+
 
   <!-- News, Announcement & Event Section -->
   <section class="py-16 bg-slate-100">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid gap-6 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
 
-        <!-- Announcement Box (Clickable) -->
+        <!-- Announcements -->
         <a href="announcement.html" class="block">
           <div
             class="p-6 rounded-2xl bg-white shadow-md hover:shadow-xl transition transform hover:-translate-y-1 hover:scale-105 duration-300">
@@ -641,14 +737,13 @@
               <i class="fas fa-bullhorn mr-2 text-green-600"></i> Announcements
             </h3>
             <p class="text-gray-700">
-              The next school assembly will be held on <strong>Friday, October 11th, 2025</strong>.
-              All students should attend in full uniform and participate actively.
+              Stay updated with important school notices, term schedules, and community information that keeps our
+              parents, students, and staff well informed.
             </p>
           </div>
         </a>
 
-
-        <!-- Event Box (Clickable) -->
+        <!-- Events -->
         <a href="event.html" class="block">
           <div
             class="p-6 rounded-2xl bg-white shadow-md hover:shadow-xl transition transform hover:-translate-y-1 hover:scale-105 duration-300">
@@ -656,13 +751,13 @@
               <i class="fas fa-calendar-alt mr-2 text-green-600"></i> Events
             </h3>
             <p class="text-gray-700">
-              Join us for our annual Sports Day on <strong>Saturday, October 19th, 2025</strong>.
-              Exciting games, competitions, and prizes await all participants and spectators.
+              From Sports Day to cultural celebrations, our events bring together faith, fun, and fellowship while
+              showcasing our students’ talents and school spirit.
             </p>
           </div>
         </a>
 
-        <!-- Gallery Box (Clickable) -->
+        <!-- Gallery -->
         <a href="photos.html" class="block">
           <div
             class="p-6 rounded-2xl bg-white shadow-md hover:shadow-xl transition transform hover:-translate-y-1 hover:scale-105 duration-300">
@@ -670,9 +765,8 @@
               <i class="fas fa-image mr-2 text-green-600"></i> Gallery
             </h3>
             <p class="text-gray-700">
-              Explore memorable moments and highlights from our school events, activities, and daily life captured in
-              our photo
-              gallery.
+              Explore cherished memories of our school community — from academic milestones to spiritual gatherings,
+              extracurricular highlights, and joyful everyday moments.
             </p>
           </div>
         </a>
@@ -682,12 +776,12 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-12 bg-slate-100">
+  <section id="contact" class="py-12 bg-slate-100 scroll-smooth">
     <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6">
 
       <!-- Contact Info + Map Box -->
       <div class="bg-green-600 text-white p-4 md:p-6 rounded-2xl shadow-lg">
-        <h2 class="text-xl md:text-2xl font-bold mb-3 text-yellow-400 text-center">Contact Us</h2>
+        <h2 class="text-xl md:text-2xl font-bold mb-3 text-yellow-400 text-center">Get In Touch</h2>
 
         <!-- Decorative Line with Icon -->
         <div class="flex items-center justify-center mb-4 w-full max-w-sm mx-auto">
@@ -698,19 +792,20 @@
           <div class="flex-grow border-t border-yellow-400"></div>
         </div>
 
-        <p class="mt-2 text-sm md:text-base">
-          Have questions? Reach out and we'll respond soon.
+        <p class="mt-2 text-sm md:text-base text-center">
+          We would love to hear from you. Reach out with any questions about admissions, events, or how to become part
+          of the Word Of Faith Christian School family.
         </p>
 
-        <ul class="mt-3 space-y-1 text-sm md:text-base">
-          <li><strong>Address:</strong> Hospital Street, Dodowa, Accra, Ghana</li>
-          <li><strong>Phone:</strong> 050 174 6739/ 024 436 5922/ 054 953 1333</li>
-          <li><strong>Email:</strong> wfcsdodowa@gmail.com</li>
+        <ul class="mt-4 space-y-2 text-sm md:text-base">
+          <li><strong>📍 Address:</strong> Hospital Street, Dodowa, Accra, Ghana</li>
+          <li><strong>📞 Phone:</strong> 050 174 6739 / 024 436 5922 / 054 953 1333</li>
+          <li><strong>✉️ Email:</strong> wfcsdodowa@gmail.com</li>
         </ul>
 
-        <div class="mt-3 rounded overflow-hidden shadow-md">
+        <div class="mt-4 rounded overflow-hidden shadow-md">
           <iframe title="Google Map Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0195251302!2d-122.41941548468102!3d37.77492927975878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808b1c1e3f01%3A0x2f3e3a1a0e6a7b0!2sSan+Francisco!5e0!3m2!1sen!2sus!4v1610000000000!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127074.24802244946!2d-0.2128679!3d5.6505621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf839d90a0498f%3A0x91edc9f156d3ae5c!2sDodowa!5e0!3m2!1sen!2sgh!4v1610000000000!5m2!1sen!2sgh"
             class="w-full h-48 md:h-56" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
@@ -718,33 +813,33 @@
       <!-- Contact Form Box -->
       <div class="bg-white p-4 md:p-6 rounded-2xl shadow-lg">
         <form id="contactForm" class="grid gap-4 md:gap-5">
-          <h2 class="text-xl md:text-1xl font-bold text-center">Send Us A Message</h2>
+          <h2 class="text-xl md:text-2xl font-bold text-center text-green-600">Send Us A Message</h2>
 
           <!-- Name -->
           <div>
             <label for="name" class="block text-slate-700 font-semibold mb-1 text-sm md:text-base">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required
-              class="w-full p-2 md:p-3 rounded-lg border border-slate-300 focus:ring-1 focus:ring-green-400 focus:outline-none text-sm md:text-base">
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required
+              class="w-full p-2 md:p-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-green-400 focus:outline-none text-sm md:text-base">
           </div>
 
           <!-- Email -->
           <div>
             <label for="email" class="block text-slate-700 font-semibold mb-1 text-sm md:text-base">Email</label>
             <input type="email" id="email" name="email" placeholder="Enter your email address" required
-              class="w-full p-2 md:p-3 rounded-lg border border-slate-300 focus:ring-1 focus:ring-green-400 focus:outline-none text-sm md:text-base">
+              class="w-full p-2 md:p-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-green-400 focus:outline-none text-sm md:text-base">
           </div>
 
           <!-- Message -->
           <div>
             <label for="message" class="block text-slate-700 font-semibold mb-1 text-sm md:text-base">Message</label>
-            <textarea id="message" name="message" rows="4" placeholder="Your message..." required
-              class="w-full p-2 md:p-3 rounded-lg border border-slate-300 focus:ring-1 focus:ring-green-400 focus:outline-none text-sm md:text-base"></textarea>
+            <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required
+              class="w-full p-2 md:p-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-green-400 focus:outline-none text-sm md:text-base"></textarea>
           </div>
 
           <!-- Submit Button -->
           <div class="flex justify-start">
             <button type="submit"
-              class="bg-green-600 text-white font-bold px-3 md:px-4 py-1 md:py-2 rounded-full hover:bg-green-700 transition transform hover:-translate-y-1 shadow-md text-sm md:text-base">
+              class="bg-green-600 text-white font-bold px-4 md:px-5 py-2 md:py-3 rounded-full hover:bg-green-700 transition transform hover:-translate-y-1 shadow-md text-sm md:text-base">
               Send Message
             </button>
           </div>
@@ -757,7 +852,7 @@
     </div>
   </section>
 
-  <!-- JavaScript -->
+  <!-- JavaScript for Validation -->
   <script>
     const form = document.getElementById('contactForm');
     const formMessage = document.getElementById('formMessage');
@@ -769,21 +864,26 @@
       const email = document.getElementById('email').value.trim();
       const message = document.getElementById('message').value.trim();
 
+      // Basic validation
       if (!name || !email || !message) {
-        formMessage.textContent = 'Please fill in all fields.';
-        formMessage.classList.remove('text-green-600');
-        formMessage.classList.add('text-red-500');
+        formMessage.textContent = '⚠️ Please fill in all fields.';
+        formMessage.className = 'mt-2 font-semibold text-sm md:text-base text-red-500';
         return;
       }
 
-      formMessage.textContent = 'Sending message...';
-      formMessage.classList.remove('text-red-500');
-      formMessage.classList.add('text-green-600');
+      // Email validation (basic regex)
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!email.match(emailPattern)) {
+        formMessage.textContent = '⚠️ Please enter a valid email address.';
+        formMessage.className = 'mt-2 font-semibold text-sm md:text-base text-red-500';
+        return;
+      }
 
-      setTimeout(() => {
-        formMessage.textContent = 'Message sent successfully!';
-        form.reset();
-      }, 1500);
+      // Success feedback
+      formMessage.textContent = '✅ Message sent successfully! We will get back to you soon.';
+      formMessage.className = 'mt-2 font-semibold text-sm md:text-base text-green-600';
+
+      form.reset();
     });
   </script>
 
@@ -797,8 +897,8 @@
         <div>
           <img src="images/logo.jpeg" alt="School Logo" class="w-28 mx-auto md:mx-0 mb-4">
           <h3 class="text-lg font-semibold text-yellow-400">Word Of Faith Christian School</h3>
-          <p class="text-green-200 mt-2 text-1xl">
-            Arise and Shine
+          <p class="text-slate-100 mt-2 text-1xl">
+            "Arise and Shine"
         </div>
 
         <!-- Quick Links -->
