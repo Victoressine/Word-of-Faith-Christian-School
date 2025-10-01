@@ -66,6 +66,7 @@
       </div>
 
       <!-- Desktop Navigation -->
+      <!-- Home -->
       <nav class="hidden lg:flex space-x-6 text-base">
         <a href="index.html" class="relative group text-gray-800 hover:text-green-600">
           Home
@@ -163,7 +164,8 @@
           </div>
         </div>
 
-        <a href="#contact" class="relative group hover:text-green-600">
+        <!-- Contact -->
+        <a href="index.html#contact" class="relative group hover:text-green-600">
           Contact
           <span
             class="absolute left-1/2 -bottom-2 flex -translate-x-1/2 space-x-1 opacity-0 group-hover:opacity-100 transition">
@@ -181,6 +183,7 @@
     </div>
 
     <!-- Mobile/Tablet Menu -->
+    <!-- Home -->
     <div id="mobile-menu" class="lg:hidden hidden bg-gray-50 border-t px-4 py-4 space-y-2">
       <a href="index.html" class="block py-2 px-2 rounded hover:bg-green-100">Home</a>
 
@@ -248,7 +251,8 @@
         </div>
       </div>
 
-      <a href="#contact" class="block py-2 px-2 rounded hover:bg-green-100">Contact</a>
+      <!-- Contact -->
+      <a href="index.html#contact" class="block py-2 px-2 rounded hover:bg-green-100">Contact</a>
     </div>
   </header>
 
@@ -270,265 +274,264 @@
   </script>
 
 
-    <!-- Page Header -->
-    <section class="bg-green-600 text-white py-16 text-center">
-        <h1 class="text-4xl font-bold">Academics</h1>
-        <p class="mt-2 text-lg text-green-100">Your child’s learning journey begins here at <span
-                class="font-semibold">Word Of Faith Christian School</p>
-    </section>
+  <!-- Page Header -->
+  <section class="bg-green-600 text-white py-16 text-center">
+    <h1 class="text-4xl font-bold">Academics</h1>
+    <p class="mt-2 text-lg text-green-100">Your child’s learning journey begins here at <span class="font-semibold">Word
+        Of Faith Christian School</p>
+  </section>
 
-    <!-- Admissions Intro Section -->
-    <section class="bg-slate-100 py-16">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-12">
+  <!-- Admissions Intro Section -->
+  <section class="bg-slate-100 py-16">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-12">
 
-            <!-- Left Content -->
-            <div>
-                <h2 class="text-3xl md:text-4xl font-bold text-green-700 mb-6">
-                    Your child’s journey begins here
-                </h2>
-                <p class="text-gray-700 mb-4 leading-relaxed">
-                    Selecting the perfect school for your child is a pivotal choice for every parent.
-                    At <span class="font-semibold">Word Of Faith Christian School</span>, we are committed
-                    to guiding you through this journey with programs designed to nurture your child’s
-                    full potential, values, and faith.
-                </p>
-                <p class="text-gray-700 mb-6 leading-relaxed">
-                    We aim to be one of the best Christian schools in Ghana, dedicated to creating
-                    a nurturing and stimulating environment where young minds can thrive academically,
-                    socially, and spiritually. Our programs run year-round, providing a supportive
-                    space for learners, closing only during major holiday seasons and public holidays
-                    to allow families time together.
-                </p>
-            </div>
+      <!-- Left Content -->
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold text-green-700 mb-6">
+          Your child’s journey begins here
+        </h2>
+        <p class="text-gray-700 mb-4 leading-relaxed">
+          Selecting the perfect school for your child is a pivotal choice for every parent.
+          At <span class="font-semibold">Word Of Faith Christian School</span>, we are committed
+          to guiding you through this journey with programs designed to nurture your child’s
+          full potential, values, and faith.
+        </p>
+        <p class="text-gray-700 mb-6 leading-relaxed">
+          We aim to be one of the best Christian schools in Ghana, dedicated to creating
+          a nurturing and stimulating environment where young minds can thrive academically,
+          socially, and spiritually. Our programs run year-round, providing a supportive
+          space for learners, closing only during major holiday seasons and public holidays
+          to allow families time together.
+        </p>
+      </div>
 
-            <!-- Right Image -->
-            <div class="flex justify-center">
-                <img src="images/mv000.png" alt="Admissions at Word Of Faith Christian School"
-                    class="rounded-xl shadow-lg">
-            </div>
+      <!-- Right Image -->
+      <div class="flex justify-center">
+        <img src="images/mv000.png" alt="Admissions at Word Of Faith Christian School" class="rounded-xl shadow-lg">
+      </div>
+    </div>
+  </section>
+
+  <!-- Admission Levels Boxes -->
+  <section class="w-full bg-slate-100 py-12">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-4 gap-4">
+
+      <!-- Nursery Box -->
+      <div onclick="toggleContent('nurseryContent')"
+        class="cursor-pointer p-2 md:p-3 rounded-2xl bg-green-600 shadow-md hover:shadow-xl transition transform hover:-translate-y-1 hover:scale-105 duration-300 text-white flex flex-col max-w-xs">
+        <h3 class="text-2xl text-yellow-400 font-semibold flex items-center">
+          Nursery <i class="fas fa-arrow-circle-down ml-2 animate-bounce-updown"></i>
+        </h3>
+      </div>
+
+      <!-- Primary Box -->
+      <div onclick="toggleContent('primaryContent')"
+        class="cursor-pointer p-2 md:p-3 rounded-2xl bg-yellow-400 shadow-md hover:shadow-xl transition transform hover:-translate-y-1 hover:scale-105 duration-300 text-white flex flex-col max-w-xs">
+        <h3 class="text-2xl font-semibold flex items-center">
+          Primary <i class="fas fa-arrow-circle-down ml-2 animate-bounce-updown"></i>
+        </h3>
+      </div>
+
+      <!-- Junior High Box -->
+      <div onclick="toggleContent('juniorContent')"
+        class="cursor-pointer p-2 md:p-3 rounded-2xl bg-white shadow-md hover:shadow-xl transition transform hover:-translate-y-1 hover:scale-105 duration-300 text-black flex flex-col max-w-xs">
+        <h3 class="text-2xl font-semibold flex items-center">
+          Junior High <i class="fas fa-arrow-circle-down ml-2 animate-bounce-updown"></i>
+        </h3>
+      </div>
+
+      <!-- Senior High Box -->
+      <div onclick="toggleContent('seniorContent')"
+        class="cursor-pointer p-2 md:p-3 rounded-2xl bg-black shadow-md hover:shadow-xl transition transform hover:-translate-y-1 hover:scale-105 duration-300 text-white flex flex-col max-w-xs">
+        <h3 class="text-2xl text-green-600 font-semibold flex items-center">
+          Senior High <i class="fas fa-arrow-circle-down ml-2 animate-bounce-updown"></i>
+        </h3>
+      </div>
+
+    </div>
+
+    <!-- Full content sections -->
+
+    <!-- Preschool / Nursery (Visible by default) -->
+    <div id="nurseryContent" class="mt-8 p-6 bg-green-100 rounded-lg text-black">
+      <section class="w-full py-16">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+
+          <!-- Text Content (Left) -->
+          <div class="md:w-1/2 text-gray-800">
+            <h2 class="text-3xl md:text-4xl font-bold text-green-600 mb-4">Preschool / Nursery</h2>
+            <p class="mb-4">
+              At <span class="font-semibold">Word Of Faith Christian School</span>, our Preschool and
+              Nursery programs are designed to spark curiosity, creativity, and a love for learning in our
+              youngest learners. We focus on building strong foundations academically, socially, and
+              spiritually.
+            </p>
+            <p class="mb-4">
+              Ages: <span class="font-semibold">3 to 5 years</span>. Programs focus on literacy, numeracy,
+              communication skills, and emotional development.
+            </p>
+            <p class="mb-6">
+              Activities include play-based learning, creative arts, music, storytelling, basic science
+              experiments, and early motor skills development.
+            </p>
+
+            <!-- Downloadable Resource -->
+            <a href="admissions.html"
+              class="inline-block bg-yellow-400 text-green-600 font-medium px-6 py-3 rounded-lg shadow-md transition hover:bg-green-600 hover:text-white">
+              Requirements & Form
+            </a>
+          </div>
+
+          <!-- Image Content (Right) -->
+          <div class="md:w-1/2 flex justify-center">
+            <img src="images/lib018.png" alt="Preschool Classroom"
+              class="rounded-xl shadow-lg object-cover w-full h-80 md:h-[400px]">
+          </div>
+
         </div>
-    </section>
+      </section>
+    </div>
 
-    <!-- Admission Levels Boxes -->
-    <section class="w-full bg-slate-100 py-12">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-4 gap-4">
+    <!-- Primary School -->
+    <div id="primaryContent" class="hidden mt-8 p-6 bg-yellow-100 rounded-lg text-black">
+      <section class="w-full py-16">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
 
-            <!-- Nursery Box -->
-            <div onclick="toggleContent('nurseryContent')"
-                class="cursor-pointer p-2 md:p-3 rounded-2xl bg-green-600 shadow-md hover:shadow-xl transition transform hover:-translate-y-1 hover:scale-105 duration-300 text-white flex flex-col max-w-xs">
-                <h3 class="text-2xl text-yellow-400 font-semibold flex items-center">
-                    Nursery <i class="fas fa-arrow-circle-down ml-2 animate-bounce-updown"></i>
-                </h3>
-            </div>
+          <div class="md:w-1/2 text-gray-800">
+            <h2 class="text-3xl md:text-4xl font-bold text-green-600 mb-4">Primary School</h2>
+            <p class="mb-4">
+              At <span class="font-semibold">Word Of Faith Christian School</span>, our Primary School
+              program builds on the foundations laid in Nursery, nurturing academic excellence,
+              creativity, and strong moral values.
+            </p>
+            <p class="mb-4">
+              Ages: <span class="font-semibold">6 to 11 years</span>. Curriculum emphasizes literacy,
+              numeracy, critical thinking, and social-emotional development.
+            </p>
+            <p class="mb-6">
+              Programs include English and Mathematics mastery, Science and Technology exploration,
+              Creative Arts, Physical Education, and Biblical Studies. Each child receives personalized
+              guidance from our qualified teachers to ensure holistic growth.
+            </p>
 
-            <!-- Primary Box -->
-            <div onclick="toggleContent('primaryContent')"
-                class="cursor-pointer p-2 md:p-3 rounded-2xl bg-yellow-400 shadow-md hover:shadow-xl transition transform hover:-translate-y-1 hover:scale-105 duration-300 text-white flex flex-col max-w-xs">
-                <h3 class="text-2xl font-semibold flex items-center">
-                    Primary <i class="fas fa-arrow-circle-down ml-2 animate-bounce-updown"></i>
-                </h3>
-            </div>
 
-            <!-- Junior High Box -->
-            <div onclick="toggleContent('juniorContent')"
-                class="cursor-pointer p-2 md:p-3 rounded-2xl bg-white shadow-md hover:shadow-xl transition transform hover:-translate-y-1 hover:scale-105 duration-300 text-black flex flex-col max-w-xs">
-                <h3 class="text-2xl font-semibold flex items-center">
-                    Junior High <i class="fas fa-arrow-circle-down ml-2 animate-bounce-updown"></i>
-                </h3>
-            </div>
+            <a href="admissions.html"
+              class="inline-block bg-yellow-400 text-green-600 font-medium px-6 py-3 rounded-lg shadow-md transition hover:bg-green-600 hover:text-white">
+              Requirements & Form
+            </a>
+          </div>
 
-            <!-- Senior High Box -->
-            <div onclick="toggleContent('seniorContent')"
-                class="cursor-pointer p-2 md:p-3 rounded-2xl bg-black shadow-md hover:shadow-xl transition transform hover:-translate-y-1 hover:scale-105 duration-300 text-white flex flex-col max-w-xs">
-                <h3 class="text-2xl text-green-600 font-semibold flex items-center">
-                    Senior High <i class="fas fa-arrow-circle-down ml-2 animate-bounce-updown"></i>
-                </h3>
-            </div>
+          <div class="md:w-1/2 flex justify-center">
+            <img src="images/lib018.png" alt="Primary Classroom"
+              class="rounded-xl shadow-lg object-cover w-full h-80 md:h-[400px]">
+          </div>
 
         </div>
+      </section>
+    </div>
 
-        <!-- Full content sections -->
+    <!-- Junior High School -->
+    <div id="juniorContent" class="hidden mt-8 p-6 bg-gray-100 rounded-lg text-black">
+      <section class="w-full py-16">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
 
-        <!-- Preschool / Nursery (Visible by default) -->
-        <div id="nurseryContent" class="mt-8 p-6 bg-green-100 rounded-lg text-black">
-            <section class="w-full py-16">
-                <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+          <div class="md:w-1/2 text-gray-800">
+            <h2 class="text-3xl md:text-4xl font-bold text-green-600 mb-4">Junior High School</h2>
+            <p class="mb-4">
+              The Junior High School at <span class="font-semibold">Word Of Faith Christian School</span>
+              serves students aged <span class="font-semibold">12 to 15 years</span>, providing a bridge
+              between primary education and senior high school.
+            </p>
+            <p class="mb-6">
+              Curriculum includes advanced literacy and numeracy, Science, ICT, Creative Arts, Physical
+              Education, and Biblical Studies. Students engage in critical thinking projects, teamwork,
+              and leadership development.
+            </p>
 
-                    <!-- Text Content (Left) -->
-                    <div class="md:w-1/2 text-gray-800">
-                        <h2 class="text-3xl md:text-4xl font-bold text-green-600 mb-4">Preschool / Nursery</h2>
-                        <p class="mb-4">
-                            At <span class="font-semibold">Word Of Faith Christian School</span>, our Preschool and
-                            Nursery programs are designed to spark curiosity, creativity, and a love for learning in our
-                            youngest learners. We focus on building strong foundations academically, socially, and
-                            spiritually.
-                        </p>
-                        <p class="mb-4">
-                            Ages: <span class="font-semibold">3 to 5 years</span>. Programs focus on literacy, numeracy,
-                            communication skills, and emotional development.
-                        </p>
-                        <p class="mb-6">
-                            Activities include play-based learning, creative arts, music, storytelling, basic science
-                            experiments, and early motor skills development.
-                        </p>
+            <a href="admissions.html"
+              class="inline-block bg-yellow-400 text-green-800 font-medium px-6 py-3 rounded-lg shadow-md transition hover:bg-green-600 hover:text-white">
+              Requirements & Form
+            </a>
+          </div>
 
-                        <!-- Downloadable Resource -->
-                        <a href="admissions.html"
-                            class="inline-block bg-yellow-400 text-green-600 font-medium px-6 py-3 rounded-lg shadow-md transition hover:bg-green-600 hover:text-white">
-                            Requirements & Form
-                        </a>
-                    </div>
+          <div class="md:w-1/2 flex justify-center">
+            <img src="images/lib018.png" alt="Junior High Classroom"
+              class="rounded-xl shadow-lg object-cover w-full h-80 md:h-[400px]">
+          </div>
 
-                    <!-- Image Content (Right) -->
-                    <div class="md:w-1/2 flex justify-center">
-                        <img src="images/lib018.png" alt="Preschool Classroom"
-                            class="rounded-xl shadow-lg object-cover w-full h-80 md:h-[400px]">
-                    </div>
-
-                </div>
-            </section>
         </div>
+      </section>
+    </div>
 
-        <!-- Primary School -->
-        <div id="primaryContent" class="hidden mt-8 p-6 bg-yellow-100 rounded-lg text-black">
-            <section class="w-full py-16">
-                <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+    <!-- Senior High School -->
+    <div id="seniorContent" class="hidden mt-8 p-6 bg-gray-800 rounded-lg text-white">
+      <section class="w-full py-16">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
 
-                    <div class="md:w-1/2 text-gray-800">
-                        <h2 class="text-3xl md:text-4xl font-bold text-green-600 mb-4">Primary School</h2>
-                        <p class="mb-4">
-                            At <span class="font-semibold">Word Of Faith Christian School</span>, our Primary School
-                            program builds on the foundations laid in Nursery, nurturing academic excellence,
-                            creativity, and strong moral values.
-                        </p>
-                        <p class="mb-4">
-                            Ages: <span class="font-semibold">6 to 11 years</span>. Curriculum emphasizes literacy,
-                            numeracy, critical thinking, and social-emotional development.
-                        </p>
-                        <p class="mb-6">
-                            Programs include English and Mathematics mastery, Science and Technology exploration,
-                            Creative Arts, Physical Education, and Biblical Studies. Each child receives personalized
-                            guidance from our qualified teachers to ensure holistic growth.
-                        </p>
+          <div class="md:w-1/2">
+            <h2 class="text-3xl md:text-4xl font-bold text-green-400 mb-4">Senior High School</h2>
+            <p class="mb-4">
+              Senior High School at <span class="font-semibold">Word Of Faith Christian School</span>
+              serves students aged <span class="font-semibold">16 to 18 years</span>. Focus is on
+              preparation for tertiary education, career guidance, and advanced learning.
+            </p>
+            <p class="mb-6">
+              Programs include advanced Mathematics, Sciences, ICT, Creative Arts, Physical Education, and
+              Biblical Studies. Students also engage in leadership and personal development programs.
+            </p>
 
-                        
-                        <a href="admissions.html"
-                            class="inline-block bg-yellow-400 text-green-600 font-medium px-6 py-3 rounded-lg shadow-md transition hover:bg-green-600 hover:text-white">
-                            Requirements & Form
-                        </a>
-                    </div>
+            <a href="admissions.html"
+              class="inline-block bg-yellow-400 text-green-800 font-medium px-6 py-3 rounded-lg shadow-md transition hover:bg-green-600 hover:text-white">
+              Requirements & Form
+            </a>
+          </div>
 
-                    <div class="md:w-1/2 flex justify-center">
-                        <img src="images/lib018.png" alt="Primary Classroom"
-                            class="rounded-xl shadow-lg object-cover w-full h-80 md:h-[400px]">
-                    </div>
+          <div class="md:w-1/2 flex justify-center">
+            <img src="images/lib018.png" alt="Senior High Classroom"
+              class="rounded-xl shadow-lg object-cover w-full h-80 md:h-[400px]">
+          </div>
 
-                </div>
-            </section>
         </div>
+      </section>
+    </div>
 
-        <!-- Junior High School -->
-        <div id="juniorContent" class="hidden mt-8 p-6 bg-gray-100 rounded-lg text-black">
-            <section class="w-full py-16">
-                <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+  </section>
 
-                    <div class="md:w-1/2 text-gray-800">
-                        <h2 class="text-3xl md:text-4xl font-bold text-green-600 mb-4">Junior High School</h2>
-                        <p class="mb-4">
-                            The Junior High School at <span class="font-semibold">Word Of Faith Christian School</span>
-                            serves students aged <span class="font-semibold">12 to 15 years</span>, providing a bridge
-                            between primary education and senior high school.
-                        </p>
-                        <p class="mb-6">
-                            Curriculum includes advanced literacy and numeracy, Science, ICT, Creative Arts, Physical
-                            Education, and Biblical Studies. Students engage in critical thinking projects, teamwork,
-                            and leadership development.
-                        </p>
+  <!-- CSS for arrow animation -->
+  <style>
+    @keyframes bounceUpDown {
 
-                        <a href="admissions.html"
-                            class="inline-block bg-yellow-400 text-green-800 font-medium px-6 py-3 rounded-lg shadow-md transition hover:bg-green-600 hover:text-white">
-                            Requirements & Form
-                        </a>
-                    </div>
+      0%,
+      100% {
+        transform: translateY(0);
+      }
 
-                    <div class="md:w-1/2 flex justify-center">
-                        <img src="images/lib018.png" alt="Junior High Classroom"
-                            class="rounded-xl shadow-lg object-cover w-full h-80 md:h-[400px]">
-                    </div>
+      50% {
+        transform: translateY(-6px);
+      }
+    }
 
-                </div>
-            </section>
-        </div>
+    .animate-bounce-updown {
+      animation: bounceUpDown 3s infinite;
+    }
+  </style>
 
-        <!-- Senior High School -->
-        <div id="seniorContent" class="hidden mt-8 p-6 bg-gray-800 rounded-lg text-white">
-            <section class="w-full py-16">
-                <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+  <!-- JavaScript to toggle content -->
+  <script>
+    function toggleContent(id) {
+      const sections = ['nurseryContent', 'primaryContent', 'juniorContent', 'seniorContent'];
 
-                    <div class="md:w-1/2">
-                        <h2 class="text-3xl md:text-4xl font-bold text-green-400 mb-4">Senior High School</h2>
-                        <p class="mb-4">
-                            Senior High School at <span class="font-semibold">Word Of Faith Christian School</span>
-                            serves students aged <span class="font-semibold">16 to 18 years</span>. Focus is on
-                            preparation for tertiary education, career guidance, and advanced learning.
-                        </p>
-                        <p class="mb-6">
-                            Programs include advanced Mathematics, Sciences, ICT, Creative Arts, Physical Education, and
-                            Biblical Studies. Students also engage in leadership and personal development programs.
-                        </p>
-
-                        <a href="admissions.html"
-                            class="inline-block bg-yellow-400 text-green-800 font-medium px-6 py-3 rounded-lg shadow-md transition hover:bg-green-600 hover:text-white">
-                            Requirements & Form
-                        </a>
-                    </div>
-
-                    <div class="md:w-1/2 flex justify-center">
-                        <img src="images/lib018.png" alt="Senior High Classroom"
-                            class="rounded-xl shadow-lg object-cover w-full h-80 md:h-[400px]">
-                    </div>
-
-                </div>
-            </section>
-        </div>
-
-    </section>
-
-    <!-- CSS for arrow animation -->
-    <style>
-        @keyframes bounceUpDown {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-6px);
-            }
+      sections.forEach(sec => {
+        if (sec === id) {
+          document.getElementById(sec).classList.toggle('hidden');
+        } else {
+          document.getElementById(sec).classList.add('hidden');
         }
+      });
+    }
+  </script>
 
-        .animate-bounce-updown {
-            animation: bounceUpDown 3s infinite;
-        }
-    </style>
-
-    <!-- JavaScript to toggle content -->
-    <script>
-        function toggleContent(id) {
-            const sections = ['nurseryContent', 'primaryContent', 'juniorContent', 'seniorContent'];
-
-            sections.forEach(sec => {
-                if (sec === id) {
-                    document.getElementById(sec).classList.toggle('hidden');
-                } else {
-                    document.getElementById(sec).classList.add('hidden');
-                }
-            });
-        }
-    </script>
-
-<!-- Footer -->
+  <!-- Footer -->
   <footer id="contact" class="bg-green-600 text-white py-12 mt-16 relative">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-10 text-center md:text-left">

@@ -54,6 +54,7 @@
   </div>
 
   <!-- Header & Navigation -->
+  <!-- Home -->
   <header class="bg-white shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 flex justify-between items-center py-4">
 
@@ -163,7 +164,8 @@
           </div>
         </div>
 
-        <a href="#contact" class="relative group hover:text-green-600">
+        <!-- Contact -->
+        <a href="index.html#contact" class="relative group hover:text-green-600">
           Contact
           <span
             class="absolute left-1/2 -bottom-2 flex -translate-x-1/2 space-x-1 opacity-0 group-hover:opacity-100 transition">
@@ -181,6 +183,7 @@
     </div>
 
     <!-- Mobile/Tablet Menu -->
+    <!-- Home -->
     <div id="mobile-menu" class="lg:hidden hidden bg-gray-50 border-t px-4 py-4 space-y-2">
       <a href="index.html" class="block py-2 px-2 rounded hover:bg-green-100">Home</a>
 
@@ -248,7 +251,8 @@
         </div>
       </div>
 
-      <a href="#contact" class="block py-2 px-2 rounded hover:bg-green-100">Contact</a>
+      <!-- Contact -->
+      <a href="index.html#contact" class="block py-2 px-2 rounded hover:bg-green-100">Contact</a>
     </div>
   </header>
 
@@ -269,141 +273,142 @@
     }
   </script>
 
-    <!-- Hero -->
-    <section class="relative bg-green-600 text-white py-20 text-center">
-        <div class="max-w-4xl mx-auto px-6">
-            <h1 class="text-3xl md:text-5xl font-bold text-yellow-400 mb-4">Our School Gallery</h1>
-            <p class="text-lg md:text-xl text-green-100">A glimpse into the vibrant life at Word Of Faith Christian School – where learning, faith, and talent shine together.</p>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="py-16 bg-slate-100">
-        <div class="max-w-7xl mx-auto px-6">
-            <!-- Grid Layout -->
-            <div id="gallery" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-
-                <!-- Photo 1 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="images/lib018.png" class="w-full h-48 object-cover cursor-pointer"
-                        alt="Science Fair">
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold">School Library</h3>
-                        <p class="text-sm text-gray-600">A well-stocked library that nurtures reading culture, research, and lifelong learning.</p>
-                    </div>
-                </div>
-
-                <!-- Photo 2 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="images/lab019.png" class="w-full h-48 object-cover cursor-pointer" alt="Lab Session">
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold">ICT & Lab Session</h3>
-                        <p class="text-sm text-gray-600">Hands-on learning in modern labs and ICT classrooms.</p>
-                    </div>
-                </div>
-
-                <!-- Photo 3 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="images/school001.png" class="w-full h-48 object-cover cursor-pointer"
-                        alt="Class Activities">
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold">School Entrance</h3>
-                        <p class="text-sm text-gray-600">A welcoming and secure entrance that reflects the discipline and excellence of our school community.</p>
-                    </div>
-                </div>
-
-                <!-- Photo 4 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="images/comp091.png" class="w-full h-48 object-cover cursor-pointer"
-                        alt="Cultural Day">
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold">School Compound</h3>
-                        <p class="text-sm text-gray-600">A spacious and clean compound that provides a safe and serene environment for learning and recreation.</p>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Fullscreen Modal -->
-    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-90 hidden items-center justify-center z-50 p-4">
-        <!-- Close -->
-        <span onclick="closeModal()"
-            class="absolute top-4 right-6 text-white text-4xl md:text-5xl cursor-pointer font-bold">&times;</span>
-
-        <!-- Prev Button -->
-        <button id="prevBtn"
-            class="absolute left-4 text-white text-4xl md:text-5xl font-bold px-4 py-2 hover:text-yellow-400">&#10094;</button>
-
-        <!-- Image -->
-        <img id="modalImage" class="max-h-[80vh] max-w-[90vw] w-auto h-auto rounded-lg shadow-lg object-contain">
-
-        <!-- Next Button -->
-        <button id="nextBtn"
-            class="absolute right-4 text-white text-4xl md:text-5xl font-bold px-4 py-2 hover:text-yellow-400">&#10095;</button>
+  <!-- Hero -->
+  <section class="relative bg-green-600 text-white py-20 text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <h1 class="text-3xl md:text-5xl font-bold text-yellow-400 mb-4">Our School Gallery</h1>
+      <p class="text-lg md:text-xl text-green-100">A glimpse into the vibrant life at Word Of Faith Christian School –
+        where learning, faith, and talent shine together.</p>
     </div>
+  </section>
 
-    <script>
-        const images = Array.from(document.querySelectorAll("#gallery img"));
-        const modal = document.getElementById("imageModal");
-        const modalImg = document.getElementById("modalImage");
-        let currentIndex = 0;
+  <!-- Gallery Section -->
+  <section class="py-16 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-6">
+      <!-- Grid Layout -->
+      <div id="gallery" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
-        function openModal(index) {
-            currentIndex = index;
-            modal.classList.remove("hidden");
-            modal.classList.add("flex");
-            showImage();
-        }
+        <!-- Photo 1 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="images/lib018.png" class="w-full h-48 object-cover cursor-pointer" alt="Science Fair">
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">School Library</h3>
+            <p class="text-sm text-gray-600">A well-stocked library that nurtures reading culture, research, and
+              lifelong learning.</p>
+          </div>
+        </div>
 
-        function closeModal() {
-            modal.classList.add("hidden");
-            modal.classList.remove("flex");
-        }
+        <!-- Photo 2 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="images/lab019.png" class="w-full h-48 object-cover cursor-pointer" alt="Lab Session">
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">ICT & Lab Session</h3>
+            <p class="text-sm text-gray-600">Hands-on learning in modern labs and ICT classrooms.</p>
+          </div>
+        </div>
 
-        function showImage() {
-            modalImg.src = images[currentIndex].src;
-            modalImg.alt = images[currentIndex].alt;
-        }
+        <!-- Photo 3 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="images/school001.png" class="w-full h-48 object-cover cursor-pointer" alt="Class Activities">
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">School Entrance</h3>
+            <p class="text-sm text-gray-600">A welcoming and secure entrance that reflects the discipline and excellence
+              of our school community.</p>
+          </div>
+        </div>
 
-        function nextImage() {
-            currentIndex = (currentIndex + 1) % images.length;
-            showImage();
-        }
-
-        function prevImage() {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            showImage();
-        }
-
-        images.forEach((img, index) => {
-            img.addEventListener("click", () => openModal(index));
-        });
-
-        document.getElementById("nextBtn").addEventListener("click", nextImage);
-        document.getElementById("prevBtn").addEventListener("click", prevImage);
-
-        // Close modal when clicking background
-        modal.addEventListener("click", (e) => {
-            if (e.target === modal) {
-                closeModal();
-            }
-        });
-
-        // Keyboard navigation
-        document.addEventListener("keydown", (e) => {
-            if (!modal.classList.contains("hidden")) {
-                if (e.key === "ArrowRight") nextImage();
-                if (e.key === "ArrowLeft") prevImage();
-                if (e.key === "Escape") closeModal();
-            }
-        });
-    </script>
+        <!-- Photo 4 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="images/comp091.png" class="w-full h-48 object-cover cursor-pointer" alt="Cultural Day">
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">School Compound</h3>
+            <p class="text-sm text-gray-600">A spacious and clean compound that provides a safe and serene environment
+              for learning and recreation.</p>
+          </div>
+        </div>
 
 
-    <!-- Footer -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Fullscreen Modal -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-90 hidden items-center justify-center z-50 p-4">
+    <!-- Close -->
+    <span onclick="closeModal()"
+      class="absolute top-4 right-6 text-white text-4xl md:text-5xl cursor-pointer font-bold">&times;</span>
+
+    <!-- Prev Button -->
+    <button id="prevBtn"
+      class="absolute left-4 text-white text-4xl md:text-5xl font-bold px-4 py-2 hover:text-yellow-400">&#10094;</button>
+
+    <!-- Image -->
+    <img id="modalImage" class="max-h-[80vh] max-w-[90vw] w-auto h-auto rounded-lg shadow-lg object-contain">
+
+    <!-- Next Button -->
+    <button id="nextBtn"
+      class="absolute right-4 text-white text-4xl md:text-5xl font-bold px-4 py-2 hover:text-yellow-400">&#10095;</button>
+  </div>
+
+  <script>
+    const images = Array.from(document.querySelectorAll("#gallery img"));
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    let currentIndex = 0;
+
+    function openModal(index) {
+      currentIndex = index;
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+      showImage();
+    }
+
+    function closeModal() {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+
+    function showImage() {
+      modalImg.src = images[currentIndex].src;
+      modalImg.alt = images[currentIndex].alt;
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage();
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage();
+    }
+
+    images.forEach((img, index) => {
+      img.addEventListener("click", () => openModal(index));
+    });
+
+    document.getElementById("nextBtn").addEventListener("click", nextImage);
+    document.getElementById("prevBtn").addEventListener("click", prevImage);
+
+    // Close modal when clicking background
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Keyboard navigation
+    document.addEventListener("keydown", (e) => {
+      if (!modal.classList.contains("hidden")) {
+        if (e.key === "ArrowRight") nextImage();
+        if (e.key === "ArrowLeft") prevImage();
+        if (e.key === "Escape") closeModal();
+      }
+    });
+  </script>
+
+
+  <!-- Footer -->
   <footer id="contact" class="bg-green-600 text-white py-12 mt-16 relative">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-10 text-center md:text-left">
