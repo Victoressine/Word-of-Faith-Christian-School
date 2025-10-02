@@ -14,9 +14,37 @@
 
   <!-- Favicon (Logo in Browser Tab) -->
   <link rel="icon" type="image/png" href="images/word-of-faith-logo.png">
+
+  <style>
+@keyframes slidefade {
+  0% {
+    opacity: 0;
+    transform: translateX(100px); /* start from right */
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0); /* center */
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100px); /* fade left */
+  }
+}
+.animate-slidefade {
+  animation: slidefade 2.5s ease forwards;
+}
+</style>
+
 </head>
 
 <body class="font-sans text-gray-800">
+
+  <!-- Preloader Overlay -->
+<div id="preloader" class="fixed inset-0 bg-white flex items-center justify-center z-50">
+  <img src="images/word-of-faith-logo.png" alt="School Logo" 
+       class="w-32 h-32 object-contain animate-slidefade" />
+</div>
+
 
   <!-- Top Bar -->
   <div class="bg-green-600 text-gray-200 text-sm py-2 px-4">
@@ -271,130 +299,16 @@
       dropdown.classList.toggle("hidden");
       icon.classList.toggle("rotate-180");
     }
+
+     window.addEventListener("load", function() {
+    const preloader = document.getElementById("preloader");
+    setTimeout(() => {
+      preloader.style.opacity = "0";
+      preloader.style.transition = "opacity 0.6s ease";
+      setTimeout(() => preloader.style.display = "none", 600);
+    }, 2500); // matches animation duration
+  });
   </script>
-
-
-  <!-- Hero -->
-  <section class="relative bg-green-600 text-white py-20 text-center">
-    <div class="max-w-4xl mx-auto px-6">
-      <h1 class="text-4xl md:text-5xl font-bold text-yellow-400 mb-4">Our School Videos</h1>
-      <p class="text-lg md:text-xl text-green-100">Watch highlights, events, and memorable moments from our
-        school.</p>
-    </div>
-  </section>
-
-  <!-- Video Gallery -->
-  <section class="max-w-7xl mx-auto px-6 py-12">
-    <h2 class="text-2xl font-bold text-center mb-8">School Activities</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-      <!-- Video Card 1 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer video-card"
-        data-video="https://www.w3schools.com/html/mov_bbb.mp4">
-        <video muted class="w-full h-full object-cover pointer-events-none">
-          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-        </video>
-      </div>
-
-      <!-- Video Card 2 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer video-card"
-        data-video="https://www.w3schools.com/html/movie.mp4">
-        <video muted class="w-full h-full object-cover pointer-events-none">
-          <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
-        </video>
-      </div>
-
-      <!-- Video Card 3 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer video-card"
-        data-video="https://www.w3schools.com/html/mov_bbb.mp4">
-        <video muted class="w-full h-full object-cover pointer-events-none">
-          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-        </video>
-      </div>
-
-      <!-- Video Card 4 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer video-card"
-        data-video="https://www.w3schools.com/html/movie.mp4">
-        <video muted class="w-full h-full object-cover pointer-events-none">
-          <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
-        </video>
-      </div>
-
-      <!-- Video Card 5 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer video-card"
-        data-video="https://www.w3schools.com/html/mov_bbb.mp4">
-        <video muted class="w-full h-full object-cover pointer-events-none">
-          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-        </video>
-      </div>
-
-      <!-- Video Card 6 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer video-card"
-        data-video="https://www.w3schools.com/html/movie.mp4">
-        <video muted class="w-full h-full object-cover pointer-events-none">
-          <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
-        </video>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Video Modal -->
-  <div id="videoModal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4">
-    <div class="relative w-full max-w-3xl mx-4">
-      <!-- Close Button -->
-      <button id="closeModal"
-        class="absolute top-3 right-3 bg-red-600 text-white rounded-full px-3 py-1 hover:bg-red-700 z-50">
-        ✕
-      </button>
-      <video id="modalVideo" controls class="w-full rounded-lg">
-        <source src="" type="video/mp4">
-      </video>
-    </div>
-  </div>
-
-  <script>
-    const videoCards = document.querySelectorAll('.video-card');
-    const modal = document.getElementById('videoModal');
-    const modalVideo = document.getElementById('modalVideo');
-    const closeModal = document.getElementById('closeModal');
-
-    // Open modal
-    videoCards.forEach(card => {
-      card.addEventListener('click', () => {
-        const videoSrc = card.dataset.video;
-        modalVideo.querySelector('source').src = videoSrc;
-        modalVideo.load();
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-        modalVideo.play();
-      });
-    });
-
-    // Close modal function
-    function closeModalFunc() {
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
-      modalVideo.pause();
-      modalVideo.currentTime = 0;
-      modalVideo.querySelector('source').src = '';
-      modalVideo.load();
-    }
-
-    // Close modal when clicking ✕ button
-    closeModal.addEventListener('click', (e) => {
-      e.stopPropagation(); // Prevent background click
-      closeModalFunc();
-    });
-
-    // Close modal when clicking outside video
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        closeModalFunc();
-      }
-    });
-  </script>
-
 
   <!-- Footer -->
   <footer id="contact" class="bg-green-600 text-white py-12 mt-16 relative">
