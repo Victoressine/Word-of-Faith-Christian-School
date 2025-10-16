@@ -12,38 +12,46 @@
   <!-- Font Awesome 5 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <!-- Favicon (Logo in Browser Tab) -->
   <link rel="icon" type="image/png" href="images/word-of-faith-logo.png">
 
   <style>
-@keyframes slidefade {
-  0% {
-    opacity: 0;
-    transform: translateX(100px); /* start from right */
-  }
-  50% {
-    opacity: 1;
-    transform: translateX(0); /* center */
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(-100px); /* fade left */
-  }
-}
-.animate-slidefade {
-  animation: slidefade 2.5s ease forwards;
-}
-</style>
+    @keyframes slidefade {
+      0% {
+        opacity: 0;
+        transform: translateX(100px);
+        /* start from right */
+      }
+
+      50% {
+        opacity: 1;
+        transform: translateX(0);
+        /* center */
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateX(-100px);
+        /* fade left */
+      }
+    }
+
+    .animate-slidefade {
+      animation: slidefade 2.5s ease forwards;
+    }
+  </style>
 
 </head>
 
 <body class="font-sans text-gray-800">
 
   <!-- Preloader Overlay -->
-<div id="preloader" class="fixed inset-0 bg-white flex items-center justify-center z-50">
-  <img src="images/word-of-faith-logo.png" alt="School Logo" 
-       class="w-32 h-32 object-contain animate-slidefade" />
-</div>
+  <div id="preloader" class="fixed inset-0 bg-white flex items-center justify-center z-50">
+    <img src="images/word-of-faith-logo.png" alt="School Logo" class="w-32 h-32 object-contain animate-slidefade" />
+  </div>
 
 
   <!-- Top Bar -->
@@ -284,36 +292,92 @@
     </div>
   </header>
 
-  <!-- JS for Mobile Dropdown -->
+  <!-- Merged: Mobile menu, Preloader hide, AOS loader + init -->
   <script>
-    const menuBtn = document.getElementById("menu-btn");
-    const mobileMenu = document.getElementById("mobile-menu");
+    (function () {
+      // Mobile menu
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
+      }
 
-    menuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-    });
+      // Dropdown mobile menu
+      window.toggleDropdown = function (id) {
+        const dropdown = document.getElementById(id);
+        const icon = document.getElementById(id + '-icon');
+        if (dropdown) dropdown.classList.toggle("hidden");
+        if (icon) icon.classList.toggle("rotate-180");
+      };
 
-    function toggleDropdown(id) {
-      const dropdown = document.getElementById(id);
-      const icon = document.getElementById(id + '-icon');
-      dropdown.classList.toggle("hidden");
-      icon.classList.toggle("rotate-180");
-    }
+      // Helper: ensure AOS library is present, load dynamically if needed
+      function ensureAOS(callback) {
+        if (typeof AOS !== 'undefined' && AOS && typeof AOS.init === 'function') {
+          return callback();
+        }
+        // load AOS dynamically and call callback on load
+        const s = document.createElement('script');
+        s.src = 'https://unpkg.com/aos@2.3.1/dist/aos.js';
+        s.async = true;
+        s.onload = () => callback();
+        s.onerror = () => {
+          console.warn('AOS failed to load from CDN. Check network / CSP.');
+          // still call callback to avoid blocking site
+          callback();
+        };
+        document.head.appendChild(s);
+      }
 
-     window.addEventListener("load", function() {
-    const preloader = document.getElementById("preloader");
-    setTimeout(() => {
-      preloader.style.opacity = "0";
-      preloader.style.transition = "opacity 0.6s ease";
-      setTimeout(() => preloader.style.display = "none", 600);
-    }, 2500); // matches animation duration
-  });
+      function initAOS() {
+        try {
+          if (typeof AOS !== 'undefined' && AOS && typeof AOS.init === 'function') {
+            AOS.init({ duration: 1000, once: true, offset: 100 });
+            // ensure AOS recalculates positions after load and after layout shifts
+            setTimeout(() => AOS.refresh(), 50);
+          } else {
+            // nothing to init (AOS didn't load), silently continue
+          }
+        } catch (e) {
+          console.error('AOS init error:', e);
+        }
+      }
+
+      // -- Preloader hide logic -- waits for full load, waits animation length, then hides overlay &
+      // initializes AOS (so animations run after preloader removed)
+      function hidePreloaderAndInitAOS() {
+        const pre = document.getElementById('preloader');
+        // duration must match your animation (2.5s) - tweak if you changed that
+        const animationWait = 2500;
+        if (!pre) {
+          // still ensure AOS is available and init
+          ensureAOS(initAOS);
+          return;
+        }
+
+        // Wait the animation duration, then fade preloader out and init AOS
+        setTimeout(() => {
+          pre.style.opacity = '0';
+          pre.style.transition = 'opacity 0.6s ease';
+          setTimeout(() => {
+            pre.style.display = 'none';
+            ensureAOS(initAOS);
+          }, 600);
+        }, animationWait);
+      }
+
+      if (document.readyState === 'complete') {
+        hidePreloaderAndInitAOS();
+      } else {
+        window.addEventListener('load', hidePreloaderAndInitAOS);
+      }
+
+    })();
   </script>
 
   <!-- Hero -->
   <section class="relative bg-green-600 text-white py-20 text-center">
     <div class="max-w-4xl mx-auto px-6">
-      <h1 class="text-3xl md:text-5xl font-bold text-yellow-400 mb-4">Our Facilities</h1>
+      <h1 class="text-4xl md:text-5xl font-bold text-yellow-400 mb-4">Our Facilities</h1>
       <p class="text-lg md:text-xl text-green-100">
         Explore the well-equipped facilities at Word Of Faith Christian School, designed to inspire learning,
         creativity, discipline, and spiritual growth for every student.
@@ -329,9 +393,9 @@
 
         <!-- Facility 1 -->
         <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300">
-          <img src="images/class002.jpg" class="w-full h-80 object-cover cursor-pointer" alt="Science Lab">
+          <img src="images/classroom.png" class="w-full h-80 object-cover cursor-pointer" alt="Classroom">
           <div class="p-8">
-            <h3 class="text-2xl font-bold">Learning-Friendly Classrooms</h3>
+            <h3 class="text-xl font-bold text-green-600">Learning-Friendly Classrooms</h3>
             <p class="text-lg text-gray-600 mt-3">Our classrooms are designed to be welcoming, engaging, and supportive,
               creating the perfect environment for effective learning.</p>
           </div>
@@ -339,9 +403,9 @@
 
         <!-- Facility 2 -->
         <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300">
-          <img src="images/bo005.jpg" class="w-full h-80 object-cover cursor-pointer" alt="Sports Field">
+          <img src="images/dormitory.png" class="w-full h-80 object-cover cursor-pointer" alt="Boarding House">
           <div class="p-8">
-            <h3 class="text-2xl font-bold">Boarding School</h3>
+            <h3 class="text-xl font-bold text-green-600">Boarding House</h3>
             <p class="text-lg text-gray-600 mt-3">Secure and well-supervised hostels that provide students with a safe,
               supportive, and homely environment.</p>
           </div>
@@ -349,9 +413,9 @@
 
         <!-- Facility 3 -->
         <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300">
-          <img src="images/lib018.png" class="w-full h-80 object-cover cursor-pointer" alt="Library">
+          <img src="images/library.png" class="w-full h-80 object-cover cursor-pointer" alt="Library">
           <div class="p-8">
-            <h3 class="text-2xl font-bold">Library</h3>
+            <h3 class="text-xl font-bold text-green-600">Library</h3>
             <p class="text-lg text-gray-600 mt-3">A well-stocked library with a wide range of books and resources to
               inspire reading, research, and knowledge building.</p>
           </div>
@@ -359,9 +423,9 @@
 
         <!-- Facility 4 -->
         <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300">
-          <img src="images/lab019.png" class="w-full h-80 object-cover cursor-pointer" alt="Computer Lab">
+          <img src="images/computer-lab.png" class="w-full h-80 object-cover cursor-pointer" alt="Computer Lab">
           <div class="p-8">
-            <h3 class="text-2xl font-bold">Computer Lab</h3>
+            <h3 class="text-xl font-bold text-green-600">Computer Lab</h3>
             <p class="text-lg text-gray-600 mt-3">Equipped with modern computers and internet access, our lab supports
               hands-on learning and digital skills development.</p>
           </div>
@@ -369,9 +433,9 @@
 
         <!-- Facility 5 -->
         <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300">
-          <img src="images/compund005.png" class="w-full h-80 object-cover cursor-pointer" alt="Sports Field">
+          <img src="images/school-compound.png" class="w-full h-80 object-cover cursor-pointer" alt="Large Compound">
           <div class="p-8">
-            <h3 class="text-2xl font-bold">Large Compound</h3>
+            <h3 class="text-xl font-bold text-green-600">Large Compound</h3>
             <p class="text-lg text-gray-600 mt-3">A spacious compound that provides room for sports, recreation, and
               outdoor activities in a safe environment.</p>
           </div>
@@ -379,9 +443,9 @@
 
         <!-- Facility 6 -->
         <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300">
-          <img src="images/a001.jpg" class="w-full h-80 object-cover cursor-pointer" alt="Sports Field">
+          <img src="images/auditorium.png" class="w-full h-80 object-cover cursor-pointer" alt="Auditorium">
           <div class="p-8">
-            <h3 class="text-2xl font-bold">Auditorium</h3>
+            <h3 class="text-xl font-bold text-green-600">Auditorium</h3>
             <p class="text-lg text-gray-600 mt-3">A modern auditorium for hosting events, presentations, and
               performances, offering students opportunities to learn and showcase their talents.</p>
           </div>
@@ -468,7 +532,7 @@
 
 
   <!-- Footer -->
-  <footer id="contact" class="bg-green-600 text-white py-12 mt-16 relative">
+  <footer id="contact" class="bg-green-600 text-white py-12 mt-16 relative" data-aos="fade-up">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-10 text-center md:text-left">
 
@@ -476,8 +540,8 @@
         <div>
           <img src="images/logo.jpeg" alt="School Logo" class="w-28 mx-auto md:mx-0 mb-4">
           <h3 class="text-lg font-semibold text-yellow-400">Word Of Faith Christian School</h3>
-          <p class="text-green-200 mt-2 text-1xl">
-            Arise and Shine
+          <p class="text-slate-100 mt-2 text-1xl">
+            "Arise and Shine"
         </div>
 
         <!-- Quick Links -->
@@ -563,31 +627,38 @@
         &copy; <span id="currentYear"></span> Word of Faith Christian School. All Rights Reserved.
       </div>
     </div>
-
-    <!-- Scroll to Top Button -->
-    <button id="scrollTopBtn"
-      class="fixed bottom-6 right-6 bg-yellow-400 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition hidden">
-      ↑
-    </button>
   </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn"
+    class="fixed bottom-6 right-6 bg-yellow-400 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition-opacity duration-300 opacity-0 pointer-events-none">
+    ↑
+  </button>
 
   <!-- JS -->
   <script>
     // Auto year
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    const yearEl = document.getElementById('currentYear');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
 
-    // Scroll to top button
-    const scrollBtn = document.getElementById('scrollTopBtn');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        scrollBtn.classList.remove('hidden');
+    // Scroll to Top button
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+        scrollTopBtn.classList.remove("opacity-0", "pointer-events-none");
+        scrollTopBtn.classList.add("opacity-100");
       } else {
-        scrollBtn.classList.add('hidden');
+        scrollTopBtn.classList.add("opacity-0", "pointer-events-none");
+        scrollTopBtn.classList.remove("opacity-100");
       }
     });
 
-    scrollBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    scrollTopBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
     // Smooth scroll for anchor links
@@ -601,7 +672,6 @@
       });
     });
   </script>
-
 
 </body>
 
